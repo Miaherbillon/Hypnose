@@ -1,8 +1,8 @@
 body {
-  width: 80vw;
+  width: 80%;
   background-color: white;
-  border: 3vh solid #0000006f;
-  border-radius: 15vh;
+  border: 1em solid #0000006f;
+  border-radius: 5em;
   padding: 3vh;
   margin: 5vh auto;
   background-image: url("/6372365.jpg");
