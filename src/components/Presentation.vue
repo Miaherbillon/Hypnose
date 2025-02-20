@@ -52,11 +52,16 @@ import { ref } from "vue";
         Contactez-moi pour prendre rendez-vous.
       </p>
       <br />
-      <strong>
+      <div class="V">
         Après validation du rendez-vous, vous recevrez un mail avec le lien de
-        connexion Zoom ainsi qu'un lien de paiement en ligne sécurisé. Merci de
-        vous connecter 5 minutes avant le début de la séance.
-      </strong>
+        connexion Google Meet ainsi qu'un lien de paiement en ligne sécurisé.
+        <p>
+          <strong class="S"
+            >Merci de vous connecter 5 minutes avant le début de la
+            séance.</strong
+          >
+        </p>
+      </div>
     </div>
   </div>
 
@@ -112,5 +117,13 @@ strong {
 
 .Q:hover {
   text-decoration: underline;
+}
+.V {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.S {
+  color: rgb(210, 89, 194);
 }
 </style>
