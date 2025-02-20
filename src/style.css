@@ -1,0 +1,11 @@
+body {
+  width: 80vw;
+  background-color: white;
+  border: 3vh solid #0000006f;
+  border-radius: 15vh;
+  padding: 3vh;
+  margin: 5vh auto;
+  background-image: url("./src/assets/6372365.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
