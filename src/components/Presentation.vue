@@ -11,6 +11,8 @@ import { ref } from "vue";
         Formée par l'école suisse Omni depuis 2020, je vous accompagne dans
         votre bien-être grâce à l'hypnose.
       </p>
+      <a href="#contact" class="Q">C'est quoi l'hypnose Elmanienne ?</a>
+
       <p>
         <strong>
           Séances personnalisées à distance ou à domicile
@@ -77,7 +79,7 @@ import { ref } from "vue";
 h2 {
   color: #000000;
   -webkit-text-stroke: rgba(0, 0, 0, 0.229) 0.1vh;
-  font-size: 5vh;
+  font-size: 1.5em;
 }
 strong {
   color: #000000;
@@ -97,5 +99,18 @@ strong {
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translateY(0px);
   animation: float 6s ease-in-out infinite;
+}
+.Q {
+  text-decoration: none;
+  color: rgb(210, 89, 194);
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  margin: 4vh 0;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.Q:hover {
+  text-decoration: underline;
 }
 </style>

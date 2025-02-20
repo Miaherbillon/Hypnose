@@ -1,14 +1,16 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import Presentation from "./components/Presentation.vue";
-import rendezVous from "./components/Rendez-vous.vue";
+import RendezVous from "./components/Rendez-vous.vue";
+import Def from "./components/Def.vue";
 </script>
 
 <template>
   <div class="ok">
-    <HelloWorld msg="Vite + Vue" />
+    <HelloWorld msg="M'Hypnose" />
     <Presentation />
-    <rendezVous />
+    <RendezVous />
+    <Def />
   </div>
 </template>
 
@@ -17,6 +19,6 @@ import rendezVous from "./components/Rendez-vous.vue";
   border: 2vh solid #0000006f;
   border-radius: 10vh;
   padding: 2em;
-  background-color: rgba(255, 255, 255, 0.882);
+  background-color: rgba(255, 255, 255, 0.764);
 }
 </style>
