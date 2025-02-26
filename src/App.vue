@@ -11,7 +11,7 @@ import Footer from "./components/Footer.vue";
 // Variable pour gérer l'état du chargement
 const isLoading = ref(true);
 
-// Simule un chargement avant d'afficher la page (3s) //
+// Simule un chargement avant d'afficher la page (3s) ////
 onMounted(() => {
   setTimeout(() => {
     isLoading.value = false;
