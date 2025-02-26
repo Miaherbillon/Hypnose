@@ -19,7 +19,7 @@ import { ref } from "vue";
 }
 @media (max-width: 768px) {
   .footer {
-    font-size: 0.5em;
+    font-size: 0.4em;
   }
 }
 </style>
