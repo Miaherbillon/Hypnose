@@ -18,6 +18,6 @@ div {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: rgba(0, 0, 0, 0.81);
 }
 </style>
