@@ -4,32 +4,31 @@ import { ref } from "vue";
 
 <template>
   <div class="Def">
-    <h4 class="Q">L'Hypnose Elmanienne ou Ericksonienne ?</h4>
+    <h1 class="Q">L'Hypnose Elmanienne ou Ericksonienne ?</h1>
     <p id="info">
-      ... L’hypnose Elmanienne, développée par Dave Elman, est une méthode
+      L’hypnose Elmanienne, développée par Dave Elman, est une méthode
       <strong>rapide et structurée</strong> permettant d’atteindre un état
       hypnotique profond en quelques minutes grâce à des inductions rapides et
       <strong>des suggestions directes</strong>.
     </p>
 
     <p>
-      <strong
-        >... Elle est souvent utilisée en hypnose thérapeutique et médicale,
-        notamment pour la gestion de la douleur, les phobies ou les
-        addictions.</strong
-      >
+      <strong>
+        Elle est souvent utilisée en hypnose thérapeutique et médicale,
+        notamment pour la gestion de la douleur, les phobies ou les addictions.
+      </strong>
     </p>
 
     <p>
-      ... En opposition, l’hypnose Ericksonienne, créée par Milton Erickson,
-      repose sur une approche plus <strong>subtile et indirecte</strong>. Elle
-      utilise des métaphores, des suggestions ouvertes et des histoires pour
-      guider l’inconscient vers le changement de manière plus douce et
-      progressive, sans confrontation directe.
+      En opposition, l’hypnose Ericksonienne, créée par Milton Erickson, repose
+      sur une approche plus <strong>subtile et indirecte</strong>. Elle utilise
+      des métaphores, des suggestions ouvertes et des histoires pour guider
+      l’inconscient vers le changement de manière plus douce et progressive,
+      sans confrontation directe.
     </p>
 
     <p>
-      ... L’hypnose Elmanienne est donc idéale pour des transformations
+      L’hypnose Elmanienne est donc idéale pour des transformations
       <strong>rapides et efficaces</strong>, tandis que l’hypnose Ericksonienne
       convient mieux aux personnes résistantes à l’hypnose ou aux approches
       psychothérapeutiques nécessitant un travail en profondeur.
@@ -48,6 +47,7 @@ import { ref } from "vue";
   background-color: rgba(255, 255, 255, 0.618);
   border-radius: 5vh;
 }
+
 .Q {
   color: rgb(135, 89, 210);
   display: flex;
@@ -56,15 +56,18 @@ import { ref } from "vue";
   margin: 4vh 0;
   font-weight: 300;
 }
+
 strong {
   color: rgb(135, 89, 210);
 }
+
 @media (max-width: 880px) {
   div {
     font-size: 0.8em;
   }
+
   .Q {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Garder la même taille de texte pour mobile */
     text-align: center;
   }
 }

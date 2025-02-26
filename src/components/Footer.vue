@@ -16,10 +16,15 @@ import { ref } from "vue";
   display: flex;
   justify-content: center;
   font-size: 0.8em;
+  color: #555; /* Une couleur légèrement plus douce pour améliorer l'aspect visuel */
 }
+
 @media (max-width: 768px) {
   .footer {
-    font-size: 0.4em;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size: 0.6em; /* Augmenter légèrement la taille du texte pour une meilleure lisibilité */
   }
 }
 </style>
