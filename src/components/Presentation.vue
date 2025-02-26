@@ -51,11 +51,11 @@ import { ref } from "vue";
       <p>
         Je vous propose des séances d'hypnose d'une heure, en toute sérénité et
         à distance via Google Meet.
-        <strong class="tarif">
+        <p class="tarif">
           60 euros la séance
           <br />
           Prenez rendez-vous en ligne ci-dessous.
-        </strong>
+        </p>
       </p>
 
       <p><strong>Pour une séance réussie, prévoyez :</strong></p>
