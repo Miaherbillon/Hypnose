@@ -5,8 +5,9 @@ import Presentation from "./components/Presentation.vue";
 import RendezVous from "./components/Rendez-vous.vue";
 import Def from "./components/Def.vue";
 import Menu from "./components/Menu.vue";
-import Contact from "./components/contact.vue";
+// import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
+import Contactez from "./components/Contactez.vue";
 
 // Variable pour gérer l'état du chargement
 const isLoading = ref(true);
@@ -34,7 +35,7 @@ onMounted(() => {
       <Presentation />
       <RendezVous />
       <Def />
-      <Contact />
+      <Contactez />
       <Footer />
     </div>
   </div>
