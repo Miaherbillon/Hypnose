@@ -17,4 +17,9 @@ import { ref } from "vue";
   justify-content: center;
   font-size: 0.8em;
 }
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.5em;
+  }
+}
 </style>

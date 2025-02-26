@@ -30,23 +30,23 @@ h1 {
   border: 0.3em solid white;
   border-radius: 50%;
   overflow: hidden;
-  font-size: 4em;
+  font-size: 3.3em;
   text-align: center;
   box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.6);
 }
 
 /* 📱 Responsive pour téléphones */
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .title {
     font-family: "Poiret One", serif;
-
+    font-size: 1.7em;
     width: 80%;
-    padding: 1em 3em;
+    padding: 1em 2em;
     border-radius: 5em;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1em;
     border-width: 0.2em;
   }
 }

@@ -78,7 +78,6 @@ onMounted(() => {
 .ok {
   border: 2vh solid #0000006f;
   border-radius: 10vh;
-  padding: 2em;
   background-color: rgba(255, 255, 255, 0.825);
 }
 </style>

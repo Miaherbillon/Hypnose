@@ -1,5 +1,5 @@
 body {
-  width: 80%;
+  width: 70%;
   /* background-color: white; */
   border: 1em solid #0000006f;
   border-radius: 5em;
@@ -8,4 +8,15 @@ body {
   background-image: url("/001.jpg");
   background-attachment: fixed;
   background-size: cover;
+}
+
+@media (max-width: 880px) {
+  body {
+    width: 80%;
+    padding: 1em;
+    margin: 2vh auto;
+    background-image: url("/001.jpg");
+    /* background-size: 100vw; */
+    background-position: center;
+  }
 }

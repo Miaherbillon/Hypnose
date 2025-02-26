@@ -2,9 +2,7 @@
   <div class="calendrier" id="reservation">
     <iframe
       src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2D_EGei9t_KNaPrUTl5R9MXfXoJuNARyZck-xfZ90PG01w5ny46P1BGTVEs9UiO7qWdbafnw_9?gv=true"
-      style="border: 0"
-      width="100%"
-      height="600"
+      class="calendar-iframe"
       frameborder="0"></iframe>
   </div>
 </template>
@@ -15,10 +13,39 @@ export default {
     return {
       calendarUrl:
         "https://calendar.google.com/calendar/embed?src=herbillon.mia%40gmail.com&ctz=Europe%2FBrussels",
-      calendarWidth: "100vw",
-      calendarHeight: "50vh",
     };
   },
 };
 </script>
-<style scoped></style>
+
+<style scoped>
+.calendrier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.calendar-iframe {
+  width: 80vw; /* Largeur à 80% de l'écran */
+  height: 70vh; /* Hauteur à 80% de la hauteur de l'écran */
+  max-width: 1200px; /* Largeur maximale */
+  max-height: 800px; /* Hauteur maximale */
+  border: none;
+}
+
+@media (max-width: 880px) {
+  .calendar-iframe {
+    width: 80vw; /* Plus large sur petits écrans */
+    height: 70vh; /* Réduit légèrement la hauteur */
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-iframe {
+    width: 80vw;
+    height: 60vh;
+  }
+}
+</style>

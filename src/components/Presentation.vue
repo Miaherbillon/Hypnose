@@ -16,7 +16,7 @@ import { ref } from "vue";
         L’hypnose est une rencontre avec soi-même, un espace où l’on peut se
         reconnecter à son potentiel et amorcer de véritables transformations. ✨
       </p>
-      <p class="O">________________________________________</p>
+      <p class="O">________________________</p>
       <p>
         <strong class="Q">
           Contrairement aux idées reçues, l'hypnose ne consiste pas à perdre le
@@ -24,27 +24,26 @@ import { ref } from "vue";
           accédant aux ressources cachées de l’inconscient.
         </strong>
       </p>
-      <p class="O">________________________________________</p>
+      <p class="O">________________________</p>
       <p>
         Nos émotions façonnent nos perceptions, nos décisions et nos réactions
         face aux événements de la vie. Parfois, elles peuvent nous submerger ou
         nous bloquer, notamment lorsqu’elles sont liées à des traumatismes
         passés, à des peurs ou à des schémas répétitifs.
       </p>
-      Grâce à l’hypnose, il est possible de :
-      <br />
+      <p><strong>Grâce à l’hypnose, il est possible de :</strong></p>
       <p>- Comprendre et libérer des émotions refoulées.</p>
       <p>- Dépasser des blocages et des peurs.</p>
       <p>
         - Se libérer des croyances limitantes pour une meilleur estime de soi.
       </p>
-      <p class="O">________________________________________</p>
+      <p class="O">________________________</p>
       <p class="O">
         Ces pensées profondément ancrées influencent nos choix de vie et nos
         comportements. L’hypnose permet de les déconstruire et de les remplacer
         par des croyances plus aidantes.
       </p>
-      <p class="O">________________________________________</p>
+      <p class="O">________________________</p>
 
       <a href="#info" class="Q">C'est quoi l'hypnose Elmanienne ?</a>
 
@@ -78,8 +77,11 @@ import { ref } from "vue";
       </p>
       <br />
       <div class="V">
-        Après validation du rendez-vous, vous recevrez un mail avec le lien de
-        connexion Google Meet ainsi qu'un lien de paiement en ligne sécurisé.
+        <p>
+          Après validation du rendez-vous, vous recevrez un mail avec le lien de
+          connexion Google Meet ainsi qu'un lien de paiement en ligne sécurisé.
+        </p>
+
         <p>
           <strong class="S">
             Merci de vous connecter 5 minutes avant le début de la séance.
@@ -97,8 +99,8 @@ strong {
 .P {
   /* font-family: "Cutive Mono", serif; */
   font-family: "Yuji Syuku", serif;
-  width: 70%;
-  padding: 2em 4em;
+  width: 80%;
+  /* padding: 2em 4em; */
   margin: auto;
   font-size: 1em;
 }
@@ -107,7 +109,7 @@ strong {
   display: flex;
   justify-content: center;
   font-size: 1.2em;
-  margin: 2em 0;
+  /* margin: 1em 0; */
 }
 h2 {
   color: #000000;
@@ -166,33 +168,39 @@ a.Q:hover {
 
 /* 📱 Responsive pour les téléphones */
 @media (max-width: 768px) {
-  .P {
-    width: 80%;
-    margin: auto;
-  }
-
   h2 {
-    font-size: 1.5em;
-  }
-
-  strong {
     font-size: 1em;
   }
 
+  p {
+    font-size: 0.8em;
+  }
   .tarif {
     width: 80%;
     font-size: 1em;
     padding: 1em;
+    font-size: 0.8em;
+  }
+  .O {
+    margin: 0.5em auto;
+    font-size: 0.8em;
   }
 
   .Q {
-    font-size: 1.2em;
     margin: 1.5em 0;
+    font-size: 0.8em;
+  }
+  a.Q:hover {
+    font-size: 1em;
   }
 
   .D {
     font-size: 1em;
     text-align: center;
+    font-size: 0.8em;
+  }
+  .S {
+    font-size: 1em;
   }
 
   ul {
@@ -200,7 +208,11 @@ a.Q:hover {
   }
 
   li {
+    font-size: 0.8em;
+  }
+  .tarif {
     font-size: 1em;
+    text-decoration: none;
   }
 }
 </style>

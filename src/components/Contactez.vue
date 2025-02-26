@@ -47,4 +47,17 @@ p {
   color: rgb(255, 255, 255);
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  h4 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  .contact-button {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+  }
+}
 </style>

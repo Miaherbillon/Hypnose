@@ -20,4 +20,10 @@ a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.81);
 }
+@media (max-width: 880px) {
+  a {
+    font-size: 0.7em;
+    color: rgb(135, 89, 210);
+  }
+}
 </style>

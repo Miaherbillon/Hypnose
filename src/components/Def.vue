@@ -59,4 +59,13 @@ import { ref } from "vue";
 strong {
   color: rgb(135, 89, 210);
 }
+@media (max-width: 880px) {
+  div {
+    font-size: 0.8em;
+  }
+  .Q {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
 </style>
