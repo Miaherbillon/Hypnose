@@ -19,6 +19,11 @@ div {
 a {
   text-decoration: none;
   color: rgb(135, 89, 210);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgba(135, 89, 210, 0.467);
 }
 @media (max-width: 880px) {
   a {
