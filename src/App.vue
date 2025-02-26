@@ -4,6 +4,9 @@ import HelloWorld from "./components/HelloWorld.vue";
 import Presentation from "./components/Presentation.vue";
 import RendezVous from "./components/Rendez-vous.vue";
 import Def from "./components/Def.vue";
+import Menu from "./components/Menu.vue";
+import Contact from "./components/contact.vue";
+import Footer from "./components/Footer.vue";
 
 // Variable pour gérer l'état du chargement
 const isLoading = ref(true);
@@ -27,9 +30,12 @@ onMounted(() => {
     <!-- Contenu principal -->
     <div v-else class="ok">
       <HelloWorld msg="M'Hypnose" />
+      <Menu />
       <Presentation />
       <RendezVous />
       <Def />
+      <Contact />
+      <Footer />
     </div>
   </div>
 </template>
@@ -72,6 +78,6 @@ onMounted(() => {
   border: 2vh solid #0000006f;
   border-radius: 10vh;
   padding: 2em;
-  background-color: rgba(255, 255, 255, 0.764);
+  background-color: rgba(255, 255, 255, 0.825);
 }
 </style>

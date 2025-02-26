@@ -6,31 +6,57 @@ import { ref } from "vue";
   <div class="P">
     <h2>Présentation</h2>
     <div>
-      <p><strong>Mia, votre praticienne en hypnose Elmanienne</strong></p>
-      <p>
-        Formée par l'école suisse Omni depuis 2020, je vous accompagne dans
-        votre bien-être grâce à l'hypnose.
+      <p class="O">Mia, votre praticienne en hypnose Elmanienne.</p>
+      <p class="O">
+        Formée par l’école suisse Omni depuis 2020 , je vous accompagne avec
+        bienveillance dans votre cheminement personnel.
       </p>
-      <a href="#contact" class="Q">C'est quoi l'hypnose Elmanienne ?</a>
 
+      <p class="O">
+        L’hypnose est une rencontre avec soi-même, un espace où l’on peut se
+        reconnecter à son potentiel et amorcer de véritables transformations. ✨
+      </p>
+      <p class="O">________________________________________</p>
       <p>
-        <strong>
-          Séances personnalisées à distance ou à domicile
-          (Bourgogne-Franche-Comté)
+        <strong class="Q">
+          Contrairement aux idées reçues, l'hypnose ne consiste pas à perdre le
+          contrôle, mais au contraire à reprendre le pouvoir sur soi-même en
+          accédant aux ressources cachées de l’inconscient.
         </strong>
       </p>
+      <p class="O">________________________________________</p>
       <p>
-        Je vous propose des séances d'hypnose d'une heure, en toute sérénité,
-        directement chez vous ou à distance via Zoom.
+        Nos émotions façonnent nos perceptions, nos décisions et nos réactions
+        face aux événements de la vie. Parfois, elles peuvent nous submerger ou
+        nous bloquer, notamment lorsqu’elles sont liées à des traumatismes
+        passés, à des peurs ou à des schémas répétitifs.
+      </p>
+      Grâce à l’hypnose, il est possible de :
+      <br />
+      <p>- Comprendre et libérer des émotions refoulées.</p>
+      <p>- Dépasser des blocages et des peurs.</p>
+      <p>
+        - Se libérer des croyances limitantes pour une meilleur estime de soi.
+      </p>
+      <p class="O">________________________________________</p>
+      <p class="O">
+        Ces pensées profondément ancrées influencent nos choix de vie et nos
+        comportements. L’hypnose permet de les déconstruire et de les remplacer
+        par des croyances plus aidantes.
+      </p>
+      <p class="O">________________________________________</p>
+
+      <a href="#info" class="Q">C'est quoi l'hypnose Elmanienne ?</a>
+
+      <p></p>
+      <p>
+        Je vous propose des séances d'hypnose d'une heure, en toute sérénité et
+        à distance via Google Meet.
         <strong class="tarif">
           60 euros la séance
           <br />
           Prenez rendez-vous en ligne ci-dessous.
         </strong>
-      </p>
-      <p class="D">
-        Si déplacement à domicile, prenez rendez-vous directement par mail :
-        mhypnose25@gmail.com
       </p>
 
       <p><strong>Pour une séance réussie, prévoyez :</strong></p>
@@ -41,7 +67,7 @@ import { ref } from "vue";
       </ul>
       <p>
         En cas de problème technique lors de votre séance à distance, nous
-        conviendrons ensemble d'un nouvel horaire.
+        conviendrons ensemble d'un nouvel horaire, restons zen !
       </p>
       <p>
         <strong>
@@ -65,14 +91,19 @@ import { ref } from "vue";
 </template>
 
 <style scoped>
-/* Styles de base */
+strong {
+  text-decoration: underline;
+}
 .P {
+  /* font-family: "Cutive Mono", serif; */
+  font-family: "Yuji Syuku", serif;
   width: 70%;
   padding: 2em 4em;
   margin: auto;
+  font-size: 1em;
 }
 .D {
-  color: rgb(210, 89, 194);
+  color: rgb(135, 89, 210);
   display: flex;
   justify-content: center;
   font-size: 1.2em;
@@ -80,14 +111,10 @@ import { ref } from "vue";
 }
 h2 {
   color: #000000;
-  -webkit-text-stroke: rgba(0, 0, 0, 0.229) 0.08em;
   font-size: 2em;
   text-align: center;
 }
-strong {
-  color: #000000;
-  font-size: 1.2em;
-}
+
 .tarif {
   width: 60%;
   display: flex;
@@ -103,18 +130,28 @@ strong {
   transform: translateY(0px);
   animation: float 6s ease-in-out infinite;
 }
-.Q {
+.O {
   text-decoration: none;
-  color: rgb(210, 89, 194);
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
-  margin: 2em 0;
+  font-size: 1em;
+  margin: 1.4em 0;
+  text-align: center;
+}
+.Q {
+  text-decoration: none;
+  color: rgb(135, 89, 210);
+  display: flex;
+  justify-content: center;
+  font-size: 1.1em;
+  margin: 1.4em 0;
   transition: text-decoration 0.3s ease-in-out;
   text-align: center;
 }
-.Q:hover {
+a.Q:hover {
   text-decoration: underline;
+  font-size: 1.3em;
 }
 .V {
   width: 100%;
@@ -122,7 +159,9 @@ strong {
   text-align: center;
 }
 .S {
-  color: rgb(210, 89, 194);
+  color: rgb(135, 89, 210);
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
 /* 📱 Responsive pour les téléphones */
