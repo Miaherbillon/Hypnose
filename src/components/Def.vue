@@ -3,8 +3,9 @@ import { ref } from "vue";
 </script>
 
 <template>
-  <div class="Def">
-    <h1 class="Q">L'Hypnose Elmanienne ou Ericksonienne ?</h1>
+  <div class="definition">
+    <h1 class="title">L'Hypnose Elmanienne ou Ericksonienne ?</h1>
+
     <p id="info">
       L’hypnose Elmanienne, développée par Dave Elman, est une méthode
       <strong>rapide et structurée</strong> permettant d’atteindre un état
@@ -37,38 +38,44 @@ import { ref } from "vue";
 </template>
 
 <style scoped>
-.Def {
+/* Conteneur principal */
+.definition {
   font-family: "Yuji Syuku", serif;
-
-  width: 70%;
-  padding: 2vh 4vw;
+  width: 80%;
+  max-width: 800px;
+  padding: 3vh 4vw;
   margin: 4vh auto;
-  border: 1vh solid #0000006f;
-  background-color: rgba(255, 255, 255, 0.618);
-  border-radius: 5vh;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1.6;
+  text-align: justify;
 }
 
-.Q {
+/* Titre principal */
+.title {
   color: rgb(135, 89, 210);
-  display: flex;
-  justify-content: center;
-  font-size: 1.5em;
-  margin: 4vh 0;
-  font-weight: 300;
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 3vh;
+  font-weight: bold;
 }
 
+/* Mise en valeur des mots-clés */
 strong {
   color: rgb(135, 89, 210);
 }
 
+/* Responsive */
 @media (max-width: 880px) {
-  div {
-    font-size: 0.8em;
+  .definition {
+    font-size: 0.9em;
+    padding: 4vh 5vw;
   }
 
-  .Q {
-    font-size: 1.5em; /* Garder la même taille de texte pour mobile */
-    text-align: center;
+  .title {
+    font-size: 1.5em;
   }
 }
 </style>
