@@ -86,7 +86,7 @@ onUnmounted(() => {
       </p>
 
       <div class="tarif">
-        <p>💰 60 euros la séance</p>
+        <p>💰 70 euros la séance</p>
         <p>Prenez rendez-vous en ligne ci-dessous.</p>
       </div>
     </section>
