@@ -208,10 +208,11 @@ strong {
 
 /* Animation titre */
 .typed-heading {
-  font-size: 1.8em;
+  font-size: 1.5em;
   text-align: center;
   color: #000;
   border-right: 2px solid black;
+  justify-content: center;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
