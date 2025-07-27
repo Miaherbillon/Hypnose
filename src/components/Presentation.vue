@@ -2,7 +2,8 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const typedText = ref("");
-const fullText = "M'Hypnose : séance en ligne ou à domicile";
+// Ajout des mots-clés "Besançon" et "Hypnose Elmanienne" directement dans le texte d'introduction pour le SEO
+const fullText = "M'Hypnose : Votre séance d'hypnose à Besançon et en ligne.";
 let index = 0;
 let interval = null;
 
@@ -41,7 +42,7 @@ onUnmounted(() => {
           >hypnose</strong
         >
         est une rencontre profonde avec soi-même, un espace de transformation
-        positive vers la sérénité.
+        positive vers la sérénité et le **mieux-être**.
       </p>
     </section>
 
@@ -56,7 +57,7 @@ onUnmounted(() => {
           Loin des clichés, l'<strong>hypnose</strong> est un état naturel de
           conscience modifiée. Il ne s'agit pas de perdre le contrôle, mais de
           retrouver vos propres ressources intérieures pour un changement
-          positif.
+          positif et durable.
         </strong>
       </p>
     </section>
@@ -73,33 +74,33 @@ onUnmounted(() => {
         offre une approche douce pour les explorer et les apaiser, vous aidant à
         surmonter les défis du quotidien.
       </p>
-      <br />
       <p>
         Grâce à l'<strong>hypnose</strong>, il est possible de retrouver un
-        profond <strong>bien-être</strong> en :
+        profond <strong>bien-être</strong> en vous accompagnant pour :
       </p>
-      <br />
       <ul>
         <li>
-          ✅ Libérant émotions et blocages (anxiété, <strong>stress</strong>,
-          phobies).
+          ✅ La libération d'émotions et de blocages (comme l'anxiété, le
+          <strong>stress</strong>, les phobies).
         </li>
-        <li>💪 Renforçant estime de soi et confiance.</li>
-        <li>😴 Améliorant la qualité de votre <strong>sommeil</strong>.</li>
+        <li>💪 Le renforcement de l'estime de soi et de la confiance.</li>
         <li>
-          🚬 Gérant les <strong>addictions</strong> (aide au
+          😴 L'amélioration de la qualité de votre <strong>sommeil</strong>.
+        </li>
+        <li>
+          🚬 La gestion des <strong>addictions</strong> (aide au
           <strong>sevrage tabagique</strong>, etc.).
         </li>
         <li>
-          🤕 Atténuant certaines <strong>douleurs chroniques</strong> (en
-          complément médical).
+          🤕 L'atténuation de certaines <strong>douleurs chroniques</strong> (en
+          complément d'un suivi médical).
         </li>
       </ul>
-      <br />
       <p>
-        Que votre objectif soit la gestion du <strong>stress</strong>, l'anxiété
-        ou le <strong>sommeil</strong>, l'<strong>hypnose</strong> à
-        <strong>Besançon</strong> ou à distance est un chemin vers la solution.
+        Que votre objectif soit la gestion du <strong>stress</strong>, la
+        diminution de l'anxiété ou l'amélioration du <strong>sommeil</strong>,
+        l'<strong>hypnose</strong> à <strong>Besançon</strong> ou à distance est
+        un chemin efficace vers la solution.
       </p>
     </section>
 
@@ -134,12 +135,12 @@ onUnmounted(() => {
       </p>
 
       <div class="tarif-box">
-        <p>💰 Tarif : 70 euros</p>
+        <p>💰 Tarif : 70 euros la séance</p>
         <p>
           Réservez votre moment de <strong>bien-être</strong> dès maintenant.
         </p>
         <a href="#votre-lien-de-rdv" class="button-primary"
-          >Prendre rendez-vous</a
+          >Prendre rendez-vous <strong>en ligne</strong></a
         >
       </div>
     </section>
@@ -151,11 +152,10 @@ onUnmounted(() => {
       </h2>
       <p>Pour une séance réussie, prévoyez :</p>
       <ul>
-        <li>✅ Connexion internet stable.</li>
-        <li>🎧 Casque ou écouteurs pour une meilleure immersion.</li>
-        <li>🛋️ Endroit calme et propice à la relaxation.</li>
+        <li>✅ Une connexion internet stable.</li>
+        <li>🎧 Un casque ou des écouteurs pour une meilleure immersion.</li>
+        <li>🛋️ Un endroit calme et propice à la relaxation.</li>
       </ul>
-      <br />
       <p>
         Votre <strong>bien-être</strong> est ma priorité. En cas d'imprévu
         technique, nous trouverons ensemble un nouvel horaire.
@@ -169,7 +169,7 @@ onUnmounted(() => {
       </h2>
       <p>
         Contactez-moi dès aujourd'hui pour planifier votre première
-        <strong>séance d'hypnose</strong>.
+        <strong>séance d'hypnose</strong> personnalisée.
       </p>
 
       <div class="booking-info">
@@ -188,8 +188,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* Les styles restent exactement les mêmes,
-   car la mise en gras est gérée par les balises <strong> dans le HTML. */
+/* Les styles restent majoritairement les mêmes, sauf pour p et li text-align */
 
 /* Styles généraux */
 .container {
@@ -200,6 +199,11 @@ onUnmounted(() => {
   font-size: 1em;
   line-height: 1.6;
   padding: 20px 0;
+}
+
+/* Styles pour le texte en gras */
+strong {
+  color: rgb(100, 50, 180);
 }
 
 /* Animation titre */
@@ -253,7 +257,7 @@ h2:hover::after {
 /* Paragraphes et listes */
 p {
   font-size: 1em;
-  text-align: center;
+  text-align: justify; /* MODIFIÉ : Revertir à 'justify' ou 'left' pour la lisibilité */
   margin-bottom: 1em;
 }
 
@@ -264,7 +268,7 @@ ul {
 }
 
 li {
-  text-align: left;
+  text-align: left; /* MODIFIÉ : Revertir à 'left' pour la lisibilité */
   margin-bottom: 0.5em;
   font-size: 1em;
 }
@@ -368,7 +372,7 @@ li {
   p,
   li {
     font-size: 0.95em;
-    text-align: left;
+    text-align: left; /* MODIFIÉ : Revertir à 'left' pour la lisibilité sur mobile aussi */
   }
   .link-more-info,
   .button-primary {
@@ -381,8 +385,5 @@ li {
   .separator {
     margin: 2em 0;
   }
-}
-strong {
-  color: rgb(100, 50, 180);
 }
 </style>
