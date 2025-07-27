@@ -1,11 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
-// Animation machine à écrire pour le titre
 const typedText = ref("");
-// Texte plus optimisé avec mots-clés ciblés
-const fullText =
-  "Hypnose Elmanienne à Besançon - Séances en ligne pour votre bien-être";
+const fullText = "M'Hypnose : séance en ligne ou à domicile";
 let index = 0;
 let interval = null;
 
@@ -14,7 +11,7 @@ onMounted(() => {
     typedText.value = fullText.slice(0, index);
     index++;
     if (index > fullText.length) clearInterval(interval);
-  }, 100);
+  }, 70);
 });
 
 onUnmounted(() => {
@@ -23,166 +20,177 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="container">
-    <h1 aria-live="polite">{{ typedText }}</h1>
+  <main class="container">
+    <h1 aria-live="polite" class="typed-heading">{{ typedText }}</h1>
 
-    <section>
-      <h2>Votre praticienne en hypnose à Besançon et en ligne</h2>
-      <p>Je suis Mia, votre praticienne certifiée en hypnose Elmanienne.</p>
+    <section class="section-intro">
+      <h2>
+        Votre praticienne en <strong>hypnose</strong> à
+        <strong>Besançon</strong> et <strong>en ligne</strong>
+      </h2>
       <p>
-        Formée par l’école suisse Omni depuis 2020, je vous accompagne avec
-        bienveillance dans votre cheminement vers un meilleur **bien-être**
-        personnel, que vous soyez à **Besançon**, en région Franche-Comté, ou
-        partout en France grâce aux séances en ligne.
+        Je suis Mia, praticienne certifiée en
+        <strong>hypnose Elmanienne</strong>. Formée par l'école suisse Omni
+        depuis 2020, je vous accompagne avec bienveillance vers un meilleur
+        <strong>bien-être</strong> durable.
       </p>
       <p>
-        L’hypnose est une rencontre avec soi-même, un espace où l’on peut se
-        reconnecter à son potentiel et amorcer de véritables transformations
-        pour retrouver sérénité et équilibre. ✨
+        Que vous soyez à <strong>Besançon</strong>, en Franche-Comté, ou partout
+        ailleurs, nos séances d'<strong>hypnose</strong> s'adaptent à vous grâce
+        à la flexibilité de l'offre <strong>en ligne</strong>. L'<strong
+          >hypnose</strong
+        >
+        est une rencontre profonde avec soi-même, un espace de transformation
+        positive vers la sérénité.
       </p>
     </section>
 
-    <hr />
+    <hr class="separator" />
 
-    <section>
-      <h2>Démystifions l'hypnose : Reprendre le contrôle de soi</h2>
+    <section class="section-demystification">
+      <h2>
+        L'<strong>hypnose</strong> : Reprendre le contrôle de votre esprit
+      </h2>
       <p>
         <strong>
-          Contrairement aux idées reçues et aux clichés, l'hypnose ne consiste
-          pas à perdre le contrôle, mais au contraire à reprendre le pouvoir sur
-          soi-même en accédant aux ressources cachées de l’inconscient. C'est un
-          état naturel de conscience modifiée, propice au changement.
+          Loin des clichés, l'<strong>hypnose</strong> est un état naturel de
+          conscience modifiée. Il ne s'agit pas de perdre le contrôle, mais de
+          retrouver vos propres ressources intérieures pour un changement
+          positif.
         </strong>
       </p>
     </section>
 
-    <hr />
+    <hr class="separator" />
 
-    <section>
-      <h2>Les bienfaits de l'hypnose pour votre bien-être</h2>
+    <section class="section-benefits">
+      <h2>
+        Les bienfaits de l'<strong>hypnose</strong> pour votre
+        <strong>mieux-être</strong>
+      </h2>
       <p>
-        Nos émotions façonnent nos perceptions, nos décisions et nos réactions
-        face aux événements de la vie. Parfois, elles peuvent nous submerger ou
-        nous bloquer, notamment lorsqu’elles sont liées à des traumatismes
-        passés, à des peurs ou à des schémas répétitifs. L'hypnose offre une
-        approche douce et efficace pour naviguer ces défis.
+        Nos émotions peuvent parfois nous submerger. L'<strong>hypnose</strong>
+        offre une approche douce pour les explorer et les apaiser, vous aidant à
+        surmonter les défis du quotidien.
       </p>
+      <br />
       <p>
-        <strong
-          >Grâce à l’hypnose, il est possible de retrouver un profond
-          **bien-être** en :</strong
-        >
+        Grâce à l'<strong>hypnose</strong>, il est possible de retrouver un
+        profond <strong>bien-être</strong> en :
       </p>
+      <br />
       <ul>
-        <li>✅ Comprenant et libérant des émotions refoulées</li>
         <li>
-          💪 Dépassant des blocages et des peurs (phobies, anxiété, stress)
+          ✅ Libérant émotions et blocages (anxiété, <strong>stress</strong>,
+          phobies).
+        </li>
+        <li>💪 Renforçant estime de soi et confiance.</li>
+        <li>😴 Améliorant la qualité de votre <strong>sommeil</strong>.</li>
+        <li>
+          🚬 Gérant les <strong>addictions</strong> (aide au
+          <strong>sevrage tabagique</strong>, etc.).
         </li>
         <li>
-          🧘‍♀️ Se libérant des croyances limitantes pour une meilleure estime de
-          soi et une confiance retrouvée
-        </li>
-        <li>😴 Améliorant la qualité de votre sommeil</li>
-        <li>🚬 Gérant les addictions (arrêt du tabac, etc.)</li>
-        <li>
-          🤕 Soulageant certaines douleurs chroniques (en complément médical)
+          🤕 Atténuant certaines <strong>douleurs chroniques</strong> (en
+          complément médical).
         </li>
       </ul>
+      <br />
       <p>
-        Que vous cherchiez à **Besançon** ou ailleurs une aide pour le stress,
-        l'anxiété ou le sommeil, l'hypnose peut être un chemin vers la solution.
+        Que votre objectif soit la gestion du <strong>stress</strong>, l'anxiété
+        ou le <strong>sommeil</strong>, l'<strong>hypnose</strong> à
+        <strong>Besançon</strong> ou à distance est un chemin vers la solution.
       </p>
     </section>
 
-    <hr />
+    <hr class="separator" />
 
-    <section>
-      <h2>Qu'est-ce que l'hypnose Elmanienne ? Une méthode efficace</h2>
+    <section class="section-elmanienne">
+      <h2>
+        <strong>Hypnose Elmanienne</strong> : Une méthode ciblée et efficace
+      </h2>
       <p>
-        L'hypnose Elmanienne est une technique rapide et directe, axée sur
-        l'atteinte d'un état d'hypnose profonde pour faciliter le travail
-        thérapeutique. Elle est réputée pour son efficacité dans la résolution
-        de problématiques spécifiques et le renforcement des ressources
-        personnelles.
+        Cette technique est rapide et directe, favorisant un état d'<strong
+          >hypnose</strong
+        >
+        profonde. L'<strong>hypnose Elmanienne</strong> est reconnue pour son
+        efficacité dans la résolution de problématiques spécifiques et le
+        renforcement de vos ressources personnelles.
       </p>
-      <a href="#info" class="link"
-        >Cliquez ici pour en savoir plus sur cette approche d'hypnose</a
+      <a href="#info" class="link-more-info"
+        >En savoir plus sur cette approche d'<strong>hypnose</strong></a
       >
     </section>
 
-    <section>
-      <h2>Déroulement des séances d'hypnose en ligne</h2>
-      <p>
-        Je vous propose des séances d'hypnose d'une heure, en toute sérénité et
-        **à distance via Google Meet**, pour vous permettre de bénéficier de mes
-        services où que vous soyez, y compris si vous êtes à **Besançon** et
-        préférez le confort de votre domicile.
-      </p>
-
-      <div class="tarif">
-        <p>💰 **Tarif : 70 euros la séance d'hypnose**</p>
-        <p>
-          Prenez rendez-vous en ligne ci-dessous pour votre séance de
-          **bien-être**.
-        </p>
-        <a href="#votre-lien-de-rdv" class="link-button"
-          >Prendre rendez-vous en ligne</a
-        >
-      </div>
-    </section>
-
-    <section>
-      <h2>Comment bien se préparer à une séance d'hypnose à distance ?</h2>
-      <p>
-        <strong
-          >Pour une séance réussie et une expérience optimale, prévoyez
-          :</strong
-        >
-      </p>
-      <ul>
-        <li>✅ Une connexion internet stable</li>
-        <li>🎧 Un casque ou des écouteurs pour une meilleure immersion</li>
-        <li>
-          🛋️ Un endroit calme et propice à la relaxation, où vous ne serez pas
-          dérangé(e)
-        </li>
-      </ul>
-      <p>
-        En cas de problème technique lors de votre séance à distance, nous
-        conviendrons ensemble d'un nouvel horaire, votre **bien-être** est ma
-        priorité !
-      </p>
-    </section>
-
-    <section class="final-section">
+    <section class="section-sessions">
       <h2>
-        Prêt(e) à vous libérer du stress, améliorer votre bien-être et atteindre
-        vos objectifs grâce à l'hypnose ?
+        Séances d'<strong>hypnose en ligne</strong> : Confort et flexibilité
       </h2>
       <p>
-        Contactez-moi dès aujourd'hui pour prendre rendez-vous pour une séance
-        d'hypnose.
+        Je vous propose des séances d'<strong>hypnose</strong> d'une heure,
+        réalisées sereinement à distance via Google Meet. Bénéficiez de mes
+        services où que vous soyez, y compris si vous êtes à
+        <strong>Besançon</strong> et préférez le confort de votre domicile.
       </p>
 
-      <div class="validation">
+      <div class="tarif-box">
+        <p>💰 Tarif : 70 euros</p>
         <p>
-          Après validation du rendez-vous pour votre séance d'hypnose, vous
-          recevrez un mail avec le lien de connexion Google Meet ainsi qu'un
-          lien de paiement en ligne sécurisé.
+          Réservez votre moment de <strong>bien-être</strong> dès maintenant.
+        </p>
+        <a href="#votre-lien-de-rdv" class="button-primary"
+          >Prendre rendez-vous</a
+        >
+      </div>
+    </section>
+
+    <section class="section-preparation">
+      <h2>
+        Préparez votre <strong>séance d'hypnose</strong> à distance pour une
+        expérience optimale
+      </h2>
+      <p>Pour une séance réussie, prévoyez :</p>
+      <ul>
+        <li>✅ Connexion internet stable.</li>
+        <li>🎧 Casque ou écouteurs pour une meilleure immersion.</li>
+        <li>🛋️ Endroit calme et propice à la relaxation.</li>
+      </ul>
+      <br />
+      <p>
+        Votre <strong>bien-être</strong> est ma priorité. En cas d'imprévu
+        technique, nous trouverons ensemble un nouvel horaire.
+      </p>
+    </section>
+
+    <section class="section-cta">
+      <h2>
+        Prêt(e) à vous libérer du <strong>stress</strong> et atteindre vos
+        objectifs grâce à l'<strong>hypnose</strong> ?
+      </h2>
+      <p>
+        Contactez-moi dès aujourd'hui pour planifier votre première
+        <strong>séance d'hypnose</strong>.
+      </p>
+
+      <div class="booking-info">
+        <p>
+          Après validation du rendez-vous, vous recevrez un mail avec le lien
+          Google Meet et un lien de paiement sécurisé.
         </p>
         <p>
-          <strong class="highlight"
-            >Merci de vous connecter 5 minutes avant le début de la séance pour
-            un démarrage serein.</strong
-          >
+          <strong class="attention-text">
+            Connectez-vous 5 minutes avant la séance pour un démarrage serein.
+          </strong>
         </p>
       </div>
     </section>
-  </section>
+  </main>
 </template>
 
 <style scoped>
-/* Les styles restent globalement les mêmes, mais vous pourriez ajuster pour le nouveau bouton */
+/* Les styles restent exactement les mêmes,
+   car la mise en gras est gérée par les balises <strong> dans le HTML. */
+
 /* Styles généraux */
 .container {
   font-family: "Yuji Syuku", serif;
@@ -191,11 +199,12 @@ onUnmounted(() => {
   margin: auto;
   font-size: 1em;
   line-height: 1.6;
+  padding: 20px 0;
 }
 
 /* Animation titre */
-h1 {
-  font-size: 1.5em;
+.typed-heading {
+  font-size: 1.8em;
   text-align: center;
   color: #000;
   border-right: 2px solid black;
@@ -204,6 +213,7 @@ h1 {
   display: inline-block;
   width: max-content;
   animation: blinkCursor 0.8s infinite step-end;
+  margin-bottom: 1em;
 }
 
 /* Amélioration de l'animation du curseur */
@@ -215,10 +225,12 @@ h1 {
 
 /* Titres */
 h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
   color: #000;
-  margin-top: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
   position: relative;
+  text-align: center;
 }
 
 /* Effet soulignement sur h2 */
@@ -226,110 +238,151 @@ h2::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -5px;
+  transform: translateX(-50%);
+  bottom: -8px;
   width: 0;
   height: 2px;
   background-color: rgb(135, 89, 210);
-  transition: width 0.4s ease-out, left 0.4s ease-out;
+  transition: width 0.4s ease-out;
 }
 
 h2:hover::after {
-  width: 100%;
-  left: 0;
+  width: 70%;
 }
 
 /* Paragraphes et listes */
 p {
   font-size: 1em;
   text-align: center;
+  margin-bottom: 1em;
 }
 
-/* Boutons et liens */
-.link {
-  text-decoration: none;
-  color: rgb(135, 89, 210);
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+li {
+  text-align: left;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+/* Séparateur */
+.separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 3em 0;
+}
+
+/* Liens génériques */
+.link-more-info {
   display: block;
   text-align: center;
-  transition: color 0.2s ease-in-out;
+  color: rgb(135, 89, 210);
+  text-decoration: none;
+  margin-top: 1em;
+  transition: color 0.2s ease-in-out, font-size 0.2s ease-in-out;
 }
 
-.link:hover {
+.link-more-info:hover {
   text-decoration: underline;
   font-size: 1.05em;
   color: rgba(135, 89, 210, 0.8);
 }
 
-.link-button {
-  /* Nouveau style pour le bouton de RDV */
+/* Bouton principal (ex: prendre RDV) */
+.button-primary {
   display: block;
   text-align: center;
   background-color: rgb(135, 89, 210);
   color: white;
-  padding: 0.8em 1.5em;
+  padding: 0.9em 1.8em;
   border-radius: 0.5em;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 1em;
-  transition: background-color 0.3s ease;
+  margin-top: 1.5em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.link-button:hover {
+.button-primary:hover {
   background-color: rgba(135, 89, 210, 0.8);
+  transform: translateY(-2px);
 }
 
 /* Bloc tarif */
-.tarif {
+.tarif-box {
   width: 90%;
-  max-width: 400px;
+  max-width: 450px;
   text-align: center;
-  padding: 1em;
-  margin: 1.5em auto;
+  padding: 1.5em;
+  margin: 2em auto;
   background-color: white;
-  box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.1);
   border-radius: 0.8em;
-  font-size: 1em;
+  font-size: 1.05em;
   transition: transform 0.3s ease-in-out;
 }
 
-.tarif:hover {
-  transform: scale(1.05);
+.tarif-box:hover {
+  transform: scale(1.02);
 }
 
 /* Section finale */
-.final-section {
+.section-cta {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.booking-info {
   text-align: center;
   margin-top: 1.5em;
+  padding: 1em;
+  background-color: #f9f9f9;
+  border-radius: 0.5em;
 }
 
-.validation {
-  text-align: center;
-  margin-top: 1em;
-}
-
-.highlight {
+.attention-text {
   color: rgb(135, 89, 210);
   font-size: 1.1em;
+  font-weight: bold;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.2em;
+  .container {
+    width: 95%;
+    padding: 10px 0;
+  }
+  .typed-heading {
+    font-size: 1.5em;
   }
   h2 {
-    font-size: 1.3em;
+    font-size: 1.4em;
+    margin-top: 1.5em;
   }
   p,
   li {
-    font-size: 0.9em;
+    font-size: 0.95em;
+    text-align: left;
   }
-  .link,
-  .link-button {
-    font-size: 1em;
+  .link-more-info,
+  .button-primary {
+    font-size: 0.95em;
   }
-  .tarif {
-    width: 100%;
-    font-size: 0.9em;
+  .tarif-box {
+    width: 95%;
+    font-size: 0.95em;
   }
+  .separator {
+    margin: 2em 0;
+  }
+}
+strong {
+  color: rgb(100, 50, 180);
 }
 </style>
