@@ -2,7 +2,6 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const typedText = ref("");
-// Texte d'accroche optimisé SEO
 const fullText = "M'Hypnose : Votre séance d'hypnose à Besançon et en ligne.";
 let index = 0;
 let interval = null;
@@ -26,223 +25,228 @@ onUnmounted(() => {
       M'Hypnose - Mia Herbillon, Hypnothérapeute à Besançon et séances en ligne
     </h1>
 
-    <p aria-hidden="true" class="typed-heading">{{ typedText }}</p>
-
-    <section class="section-intro">
-      <h2>
-        Votre praticienne en <strong>hypnose</strong> à
-        <strong>Besançon (25000)</strong> et <strong>en ligne</strong>
-      </h2>
-      <p>
-        Je suis Mia, praticienne certifiée en
-        <strong>hypnose Elmanienne</strong>. Formée par l'école suisse Omni
-        depuis 2020, je vous accompagne avec bienveillance dans mon cabinet de
-        <strong>Besançon</strong> ou à distance vers un
-        <strong>bien-être</strong> durable.
-      </p>
-      <p>
-        Que vous habitiez à <strong>Besançon</strong>, dans le Doubs, ou partout
-        ailleurs en France, mes séances d'<strong>hypnose</strong> s'adaptent à
-        vos besoins grâce à la flexibilité de l'accompagnement
-        <strong>en ligne</strong>. L'<strong>hypnose</strong>
-        est une rencontre profonde avec soi-même pour une transformation
-        positive.
-      </p>
-    </section>
-
-    <hr class="separator" />
+    <header class="hero-section">
+      <p aria-hidden="true" class="typed-heading">{{ typedText }}</p>
+      <div class="hero-card">
+        <h2>
+          Votre praticienne en <strong>hypnose</strong> à
+          <strong>Besançon (25000)</strong>
+        </h2>
+        <p>
+          Je suis Mia, praticienne certifiée en
+          <strong>hypnose Elmanienne</strong>. Je vous accompagne avec
+          bienveillance dans mon cabinet ou à distance pour un
+          <strong>bien-être</strong> durable.
+        </p>
+      </div>
+    </header>
 
     <section class="section-benefits">
-      <h2>
-        Pourquoi consulter pour de l'<strong>hypnose à Besançon</strong> ?
-      </h2>
-      <p>
-        Nos émotions peuvent parfois nous submerger. L'<strong>hypnose</strong>
-        offre une approche douce pour les explorer et les apaiser, vous aidant à
-        surmonter les défis du quotidien.
-      </p>
-      <p>
-        Grâce à l'<strong>hypnose</strong>, il est possible de retrouver un
-        profond <strong>bien-être</strong> en vous accompagnant pour :
-      </p>
-      <ul class="seo-list">
-        <li>
-          ✅ <strong>Libération émotionnelle :</strong> gestion de l'anxiété, du
-          <strong>stress</strong> et des phobies à Besançon.
-        </li>
-        <li>
-          💪 <strong>Confiance en soi :</strong> renforcement de l'estime de soi
-          et dépassement des blocages.
-        </li>
-        <li>
-          😴 <strong>Sommeil :</strong> amélioration de la qualité de vos nuits
-          et relaxation profonde.
-        </li>
-        <li>
-          🚬 <strong>Arrêt du tabac :</strong> gestion des
-          <strong>addictions</strong> et sevrage tabagique par l'hypnose.
-        </li>
-        <li>
-          🤕 <strong>Douleurs :</strong> atténuation des douleurs chroniques (en
-          complément médical).
-        </li>
-      </ul>
-      <p>
-        Que votre objectif soit la gestion du <strong>stress</strong> ou le
-        sevrage tabagique, l'<strong>hypnose à Besançon</strong> ou à distance
-        est un chemin efficace.
-      </p>
+      <h2 class="section-title">Pourquoi consulter à Besançon ?</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">✨</div>
+          <h3>Libération</h3>
+          <p>Anxiété, <strong>stress</strong> et phobies.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">💪</div>
+          <h3>Confiance</h3>
+          <p>Estime de soi et blocages émotionnels.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">😴</div>
+          <h3>Sommeil</h3>
+          <p>Retrouvez des nuits calmes et réparatrices.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🚬</div>
+          <h3>Addictions</h3>
+          <p>Aide au <strong>sevrage tabagique</strong> efficace.</p>
+        </div>
+      </div>
     </section>
 
-    <hr class="separator" />
-
-    <section class="section-elmanienne">
-      <h2>
-        <strong>Hypnose Elmanienne</strong> : Une méthode rapide à Besançon
-      </h2>
+    <section class="info-card elmanienne">
+      <h2>L'Hypnose Elmanienne</h2>
       <p>
-        Cette technique est reconnue pour être directe et efficace. L'<strong
-          >hypnose Elmanienne</strong
-        >
-        favorise un état de transe profonde permettant de résoudre des
-        problématiques spécifiques rapidement.
+        Une méthode <strong>rapide et directe</strong>, reconnue pour son
+        efficacité à résoudre des problématiques spécifiques. Idéal pour ceux
+        qui cherchent des résultats concrets à <strong>Besançon</strong>.
       </p>
-      <a href="#info" class="link-more-info"
-        >En savoir plus sur l'approche Omni Hypnosis</a
-      >
+      <a href="#info" class="link-more-info">Découvrir la méthode Omni →</a>
     </section>
 
     <section class="section-sessions">
-      <h2>Séances d'<strong>hypnose en ligne</strong> et tarifs</h2>
-      <p>
-        Je vous propose des séances d'une heure via Google Meet. Profitez de mon
-        expertise en <strong>hypnose</strong> où que vous soyez, que vous soyez
-        résident à <strong>Besançon</strong> ou ailleurs.
-      </p>
-
-      <div class="tarif-box">
-        <p>💰 <strong>Tarif : 70 euros la séance</strong></p>
-        <p>
-          Réservez votre séance de <strong>bien-être</strong> dès maintenant.
-        </p>
+      <div class="tarif-card">
+        <div class="badge">Séance Individuelle</div>
+        <div class="price">70€</div>
+        <p>Durée : 1 heure environ</p>
+        <p>À distance via Google Meet ou en cabinet.</p>
         <a href="#votre-lien-de-rdv" class="button-primary"
-          >Prendre rendez-vous en ligne</a
+          >Réserver mon créneau</a
         >
       </div>
     </section>
 
-    <section class="section-cta">
-      <h2>Prêt(e) à changer avec l'<strong>hypnose</strong> ?</h2>
-      <p>
-        Contactez-moi pour planifier votre
-        <strong>séance d'hypnose à Besançon</strong> ou en visio.
-      </p>
-    </section>
+    <footer class="section-cta">
+      <h2>Prêt(e) pour le changement ?</h2>
+      <p>Contactez-moi pour planifier votre séance d'hypnose personnalisée.</p>
+    </footer>
   </main>
 </template>
 
 <style scoped>
-/* Ajout pour le SEO : Masque le H1 tout en le laissant lisible par Google */
+/* BASES ET TYPOGRAPHIE */
+.container {
+  font-family: "Poppins", sans-serif;
+  color: #2d2d2d;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+  padding: 40px 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
-  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.container {
-  font-family: "Yuji Syuku", serif;
-  width: 90%;
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.6;
-  padding: 20px 0;
 }
 
 strong {
-  color: rgb(100, 50, 180);
+  color: rgb(135, 89, 210);
+  font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero-section {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .typed-heading {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  color: #000;
-  border-right: 2px solid black;
-  display: block;
-  width: max-content;
-  margin: 0 auto 1em auto;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blinkCursor 0.8s infinite step-end;
-}
-
-@keyframes blinkCursor {
-  50% {
-    border-color: transparent;
-  }
-}
-
-h2 {
   font-size: 1.6em;
+  font-weight: bold;
+  color: #1a1a1a;
+  min-height: 2em;
+  margin-bottom: 20px;
+}
+
+.hero-card {
+  background-color: #fdfaff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(135, 89, 210, 0.05);
+  border: 1px solid rgba(135, 89, 210, 0.1);
+}
+
+/* SERVICES GRID */
+.section-title {
   text-align: center;
-  margin-top: 2em;
-  margin-bottom: 0.8em;
+  margin-bottom: 40px;
+  font-size: 1.8em;
 }
 
-p {
-  text-align: justify;
-  margin-bottom: 1em;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
 }
 
-.seo-list {
-  list-style: none;
-  padding: 0;
+.service-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.seo-list li {
-  text-align: left;
-  margin-bottom: 0.8em;
-  padding-left: 5px;
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(135, 89, 210, 0.12);
 }
 
+.service-card .icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+/* INFO CARD (ELMANIENNE) */
+.info-card {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* TARIF CARD */
+.tarif-card {
+  background: white;
+  border: 2px solid #f0eaff;
+  padding: 50px 20px;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto 60px;
+  box-shadow: 0 15px 40px rgba(135, 89, 210, 0.08);
+}
+
+.price {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: rgb(135, 89, 210);
+  margin: 15px 0;
+}
+
+.badge {
+  display: inline-block;
+  background: #f0eaff;
+  color: rgb(135, 89, 210);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* BOUTON */
 .button-primary {
   display: inline-block;
   background-color: rgb(135, 89, 210);
   color: white;
-  padding: 15px 30px;
-  border-radius: 8px;
+  padding: 18px 35px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.2s;
+  margin-top: 25px;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .button-primary:hover {
-  transform: translateY(-2px);
-  background-color: rgba(135, 89, 210, 0.9);
+  background-color: rgb(110, 60, 180);
+  transform: scale(1.05);
 }
 
-.tarif-box {
-  border: 1px solid #eee;
-  padding: 2em;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  text-align: center;
-}
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .typed-heading {
-    font-size: 1.1em;
-    white-space: normal;
-    width: 100%;
-    border: none;
+  .hero-card {
+    padding: 25px;
   }
-  p {
-    text-align: left;
+  .price {
+    font-size: 2.5em;
+  }
+  .typed-heading {
+    font-size: 1.2em;
   }
 }
 </style>
