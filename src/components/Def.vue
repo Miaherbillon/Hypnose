@@ -55,11 +55,12 @@ import { ref } from "vue";
   box-shadow: 0 20px 50px rgba(135, 89, 210, 0.12);
   line-height: 1.8; /* Aéré pour la lecture */
   text-align: justify;
+  color: #6c6767;
 }
 
 /* Titre passé en H2 */
 .title {
-  color: rgb(135, 89, 210);
+  color: #9d80cb;
   text-align: center;
   font-size: 1.8em;
   margin-bottom: 3vh;
@@ -70,12 +71,12 @@ import { ref } from "vue";
 .highlight-box {
   background-color: rgba(135, 89, 210, 0.05);
   padding: 15px;
-  border-left: 4px solid rgb(135, 89, 210);
+  border-left: 4px solid #9d80cb;
   margin: 20px 0;
 }
 
 strong {
-  color: rgb(110, 60, 180);
+  color: #9d80cb;
 }
 
 @media (max-width: 880px) {

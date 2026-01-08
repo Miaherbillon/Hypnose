@@ -14,7 +14,7 @@ body {
       rgba(253, 250, 248, 0.2),
       rgba(253, 250, 248, 0.2)
     ),
-    url("/001.jpg");
+    url("/007.png");
 
   /* Fixe l'arrière-plan pour qu'il ne bouge pas lors du défilement */
   background-attachment: fixed;

@@ -18,7 +18,7 @@ div {
 }
 a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #6c6767;
   transition: color 0.3s ease;
 }
 
