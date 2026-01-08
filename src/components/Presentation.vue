@@ -135,6 +135,7 @@ onUnmounted(() => {
 
 /* SEO UTILS */
 .visually-hidden {
+  background: #ffffffa5;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -178,7 +179,7 @@ strong {
 }
 
 .hero-card {
-  background: linear-gradient(135deg, #ffffff 0%, #fdfaff 100%);
+  background: #ffffffa5;
   padding: 50px 30px;
   border-radius: 40px;
   box-shadow: 0 20px 40px rgba(135, 89, 210, 0.05);
@@ -194,7 +195,7 @@ strong {
 }
 
 .city-tag {
-  background: #f0eaff;
+  background: #ffffffa5;
   padding: 2px 10px;
   border-radius: 8px;
   color: #8759d2;
@@ -209,7 +210,7 @@ strong {
 }
 
 .service-card {
-  background: #fff;
+  background: #ffffffa5;
   padding: 30px;
   border-radius: 30px;
   text-align: center;
@@ -230,7 +231,7 @@ strong {
 
 /* TARIF CARD */
 .tarif-card {
-  background: white;
+  background: #ffffffa5;
   padding: 40px;
   border-radius: 40px;
   text-align: center;

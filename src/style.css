@@ -1,50 +1,68 @@
-/* Fond de page immersif */
+/* =========================================
+   FOND DE PAGE ET STYLE GÉNÉRAL
+========================================= */
 body {
   margin: 0;
   padding: 0;
-  /* On ajoute un dégradé subtil par-dessus l'image pour que le texte soit plus lisible */
-  /* background: linear-gradient(
+
+  /* --- Configuration de l'arrière-plan --- */
+  /* 1. On applique un léger filtre clair par-dessus l'image pour la lisibilité */
+  /* 2. On définit l'image de fond.
+     IMPORTANT : Comme ton image est dans le dossier "public", 
+     le chemin doit être simplement "/001.jpg" (sans le mot public). */
+  background: linear-gradient(
       rgba(253, 250, 248, 0.2),
       rgba(253, 250, 248, 0.2)
     ),
-    url("/001.jpg"); */
+    url("/001.jpg");
+
+  /* Fixe l'arrière-plan pour qu'il ne bouge pas lors du défilement */
   background-attachment: fixed;
+  /* L'image couvre tout l'écran sans être déformée */
   background-size: cover;
+  /* L'image est toujours centrée */
   background-position: center;
+
+  /* S'assure que le fond prend au moins toute la hauteur de la fenêtre */
   min-height: 100vh;
-  /* On s'assure que le lissage des polices est parfait */
+
+  /* Optimisation du rendu des polices */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Police principale du site */
   font-family: "Quicksand", sans-serif;
 }
 
-/* La Bulle Cocooning (Le Conteneur Principal) */
+/* =========================================
+   LA BULLE PRINCIPALE (COCOONING)
+========================================= */
 .site-layout {
-  width: 90%; /* Un peu plus large pour laisser respirer le contenu */
+  /* Largeur adaptative */
+  width: 90%;
   max-width: 1050px;
 
-  /* Effet de verre premium */
-  background-color: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px) saturate(160%);
+  /* Effet de verre dépoli (Glassmorphism) */
+  background-color: rgba(255, 255, 255, 0.88); /* Blanc très opaque */
+  backdrop-filter: blur(12px) saturate(160%); /* Flou de l'image derrière */
   -webkit-backdrop-filter: blur(12px) saturate(160%);
 
-  /* Bordure ultra-fine pour définir la forme */
+  /* Bordure subtile */
   border: 1px solid rgba(255, 255, 255, 0.4);
 
-  /* Arrondis "Galet" (très organique) */
+  /* Forme de "galet" très arrondie */
   border-radius: 50px;
 
-  /* Centrage et espacement */
+  /* Centrage et espacement vertical */
   margin: 4vh auto;
-  padding: 60px 40px; /* Plus d'espace en haut et en bas */
+  padding: 60px 40px;
 
-  /* Ombre portée multi-couches (plus réaliste) */
+  /* Ombre portée douce */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02),
-    0 30px 60px rgba(135, 89, 210, 0.08); /* Rappel léger de ton violet */
+    0 30px 60px rgba(135, 89, 210, 0.08);
 
   box-sizing: border-box;
 
-  /* Animation d'entrée douce */
+  /* Animation d'entrée */
   animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -59,24 +77,21 @@ body {
   }
 }
 
-/* Optimisation pour Mobile */
+/* =========================================
+   RESPONSIVE (MOBILE)
+========================================= */
 @media (max-width: 880px) {
   .site-layout {
-    width: 95%; /* On gagne de la place sur mobile */
+    width: 95%;
     margin: 1.5vh auto;
     padding: 30px 20px;
     border-radius: 30px;
   }
 }
 
-/* Masquer la barre de défilement tout en gardant le scroll (optionnel pour le style) */
-body::-webkit-scrollbar {
-  width: 8px;
-}
-body::-webkit-scrollbar-thumb {
-  background: rgba(135, 89, 210, 0.3);
-  border-radius: 10px;
-}
+/* =========================================
+   BOUTONS (Modernes & Violets)
+========================================= */
 button,
 .cta-button {
   background: linear-gradient(135deg, #8759d2, #6a44ab);
@@ -85,10 +100,12 @@ button,
   padding: 12px 25px;
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(135, 89, 210, 0.3);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
-button:hover {
+button:hover,
+.cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(135, 89, 210, 0.4);
 }

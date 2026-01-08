@@ -25,6 +25,7 @@ export default {
   align-items: center;
   width: 80%;
   margin: auto;
+  background: #ffffffa5;
 }
 
 .calendar-iframe {
@@ -33,6 +34,7 @@ export default {
   max-width: 1200px; /* Largeur maximale */
   max-height: 800px; /* Hauteur maximale */
   border: none;
+  box-shadow: 0 20px 50px rgba(135, 89, 210, 0.12);
 }
 
 @media (max-width: 880px) {

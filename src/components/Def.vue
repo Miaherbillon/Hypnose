@@ -49,10 +49,10 @@ import { ref } from "vue";
   max-width: 800px;
   padding: 3vh 4vw;
   margin: 4vh auto;
-  border: 1px solid rgba(135, 89, 210, 0.2); /* Plus doux */
-  background-color: rgba(255, 255, 255, 0.9);
+  /* border: 1px solid rgba(135, 89, 210, 0.2); */
+  background: #ffffffa5;
   border-radius: 15px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); /* Ombre plus moderne */
+  box-shadow: 0 20px 50px rgba(135, 89, 210, 0.12);
   line-height: 1.8; /* Aéré pour la lecture */
   text-align: justify;
 }

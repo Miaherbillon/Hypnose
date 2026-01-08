@@ -69,7 +69,7 @@ onMounted(() => {
 <style scoped>
 /* Reset & Base */
 .app-container {
-  background-color: #fcfafc; /* Un blanc cassé légèrement rosé/violet pour la détente */
+  /* background-color: #fcfafc; Un blanc cassé légèrement rosé/violet pour la détente */
   min-height: 100vh;
   font-family: "Quicksand", sans-serif;
   color: #333;
@@ -116,7 +116,7 @@ onMounted(() => {
 .page-content {
   max-width: 1150px;
   margin: 30px auto;
-  background: #ffffff;
+  background: #ffffff87;
   /* Ombre plus douce et diffuse (effet Glassmorphism léger) */
   box-shadow: 0 15px 35px rgba(155, 107, 195, 0.08);
   border-radius: 40px;
