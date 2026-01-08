@@ -4,35 +4,39 @@ import { ref } from "vue";
 
 <template>
   <div class="definition">
-    <h1 class="title">L'Hypnose Elmanienne ou Ericksonienne ?</h1>
+    <h2 class="title">
+      Hypnose Elmanienne ou Ericksonienne : Quelle différence ?
+    </h2>
 
     <p id="info">
-      L’hypnose Elmanienne, développée par Dave Elman, est une méthode
+      L’<strong>hypnose Elmanienne</strong>, développée par Dave Elman, est la
+      méthode que je privilégie à <strong>Besançon</strong>. C'est une approche
       <strong>rapide et structurée</strong> permettant d’atteindre un état
       hypnotique profond en quelques minutes grâce à des inductions rapides et
       <strong>des suggestions directes</strong>.
     </p>
 
-    <p>
+    <p class="highlight-box">
       <strong>
-        Elle est souvent utilisée en hypnose thérapeutique et médicale,
-        notamment pour la gestion de la douleur, les phobies ou les addictions.
+        Elle est particulièrement efficace en hypnose thérapeutique, notamment
+        pour la gestion de la douleur, les phobies ou le sevrage tabagique.
       </strong>
     </p>
 
     <p>
       En opposition, l’hypnose Ericksonienne, créée par Milton Erickson, repose
       sur une approche plus <strong>subtile et indirecte</strong>. Elle utilise
-      des métaphores, des suggestions ouvertes et des histoires pour guider
-      l’inconscient vers le changement de manière plus douce et progressive,
-      sans confrontation directe.
+      des métaphores et des suggestions ouvertes pour guider l’inconscient de
+      manière plus douce et progressive.
     </p>
 
     <p>
-      L’hypnose Elmanienne est donc idéale pour des transformations
-      <strong>rapides et efficaces</strong>, tandis que l’hypnose Ericksonienne
-      convient mieux aux personnes résistantes à l’hypnose ou aux approches
-      psychothérapeutiques nécessitant un travail en profondeur.
+      L’<strong>hypnose Elmanienne</strong> est donc idéale pour des
+      transformations <strong>rapides et efficaces</strong>. C'est cette
+      efficacité que je vous propose de découvrir lors de nos séances d'<strong
+        >hypnose à Besançon</strong
+      >
+      ou en ligne.
     </p>
   </div>
 </template>
@@ -45,15 +49,15 @@ import { ref } from "vue";
   max-width: 800px;
   padding: 3vh 4vw;
   margin: 4vh auto;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(135, 89, 210, 0.2); /* Plus doux */
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  line-height: 1.6;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); /* Ombre plus moderne */
+  line-height: 1.8; /* Aéré pour la lecture */
   text-align: justify;
 }
 
-/* Titre principal */
+/* Titre passé en H2 */
 .title {
   color: rgb(135, 89, 210);
   text-align: center;
@@ -62,20 +66,26 @@ import { ref } from "vue";
   font-weight: bold;
 }
 
-/* Mise en valeur des mots-clés */
-strong {
-  color: rgb(135, 89, 210);
+/* Bloc de mise en avant */
+.highlight-box {
+  background-color: rgba(135, 89, 210, 0.05);
+  padding: 15px;
+  border-left: 4px solid rgb(135, 89, 210);
+  margin: 20px 0;
 }
 
-/* Responsive */
+strong {
+  color: rgb(110, 60, 180);
+}
+
 @media (max-width: 880px) {
   .definition {
-    font-size: 0.9em;
-    padding: 4vh 5vw;
+    width: 95%;
+    font-size: 0.95em;
+    padding: 20px;
   }
-
   .title {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 }
 </style>
