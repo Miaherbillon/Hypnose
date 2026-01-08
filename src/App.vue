@@ -5,33 +5,28 @@ import Presentation from "./components/Presentation.vue";
 import RendezVous from "./components/Rendez-vous.vue";
 import Def from "./components/Def.vue";
 import Menu from "./components/Menu.vue";
-// import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 import Contactez from "./components/Contactez.vue";
 
-// Variable pour gérer l'état du chargement
 const isLoading = ref(true);
 
-// Simule un chargement avant d'afficher la page (3s) ////
 onMounted(() => {
+  // Un léger délai pour laisser les polices se charger proprement
   setTimeout(() => {
     isLoading.value = false;
-  });
+  }, 500);
 });
 </script>
 
 <template>
-  <div>
-    <!-- Écran de chargement -->
+  <div class="app-wrapper">
     <div v-if="isLoading" class="loader-container">
       <div class="spinner"></div>
-      <p>Chargement...</p>
+      <p class="loader-text">M'Hypnose Besançon...</p>
     </div>
 
-    <!-- Contenu principal -->
-    <div v-else class="ok">
-      <HelloWorld msg="M'Hypnose" />
-      <Menu />
+    <div v-else class="main-layout">
+      <Menu /> <HelloWorld msg="M'Hypnose" />
       <Presentation />
       <RendezVous />
       <Def />
@@ -42,42 +37,58 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* Style pour le chargement */
+/* LOADER AUX COULEURS DU SITE */
 .loader-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
-  font-size: 1.5em;
-  font-weight: bold;
+  background-color: #fdfaff; /* Fond doux */
 }
 
-/* Animation du spinner */
 .spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(0, 0, 0, 0.1);
-  border-top: 5px solid #3498db;
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(135, 89, 210, 0.1);
+  border-top: 4px solid rgb(135, 89, 210); /* Ton violet */
   border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 10px;
+  animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  margin-bottom: 20px;
+}
+
+.loader-text {
+  font-family: "Poppins", sans-serif;
+  color: rgb(135, 89, 210);
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
 
-/* Style principal */
-.ok {
-  border: 2vh solid #0000006f;
-  border-radius: 10vh;
-  background-color: rgba(255, 255, 255, 0.825);
+/* STYLE PRINCIPAL - FINI LES BORDURES NOIRES ÉPAISSES */
+.main-layout {
+  min-height: 100vh;
+  background-color: #ffffff;
+  /* On retire la grosse bordure noire pour un design plus "aérien" */
+  transition: opacity 0.5s ease;
+}
+
+/* Si tu veux garder un cadre très léger et élégant, utilise celui-ci : */
+/* .main-layout {
+  border: 1px solid rgba(135, 89, 210, 0.1);
+  margin: 10px;
+  border-radius: 20px;
+}
+*/
+
+@media (max-width: 768px) {
+  .main-layout {
+    border: none; /* Pas de bordure sur mobile pour gagner de l'espace */
+  }
 }
 </style>
