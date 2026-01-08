@@ -1,22 +1,79 @@
+/* Fond de page immersif */
 body {
-  width: 70%;
-  /* background-color: white; */
-  border: 1em solid #0000006f;
-  border-radius: 5em;
-  padding: 3vh;
-  margin: 5vh auto;
-  background-image: url("/001.jpg");
+  margin: 0;
+  padding: 0;
+  /* On ajoute un dégradé subtil par-dessus l'image pour que le texte soit plus lisible */
+  background: linear-gradient(
+      rgba(253, 250, 248, 0.2),
+      rgba(253, 250, 248, 0.2)
+    ),
+    url("/001.jpg");
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  /* On s'assure que le lissage des polices est parfait */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand", sans-serif;
 }
 
-@media (max-width: 880px) {
-  body {
-    width: 80%;
-    padding: 1em;
-    margin: 2vh auto;
-    background-image: url("/001.jpg");
-    /* background-size: 100vw; */
-    background-position: center;
+/* La Bulle Cocooning (Le Conteneur Principal) */
+.site-layout {
+  width: 90%; /* Un peu plus large pour laisser respirer le contenu */
+  max-width: 1050px;
+
+  /* Effet de verre premium */
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+
+  /* Bordure ultra-fine pour définir la forme */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* Arrondis "Galet" (très organique) */
+  border-radius: 50px;
+
+  /* Centrage et espacement */
+  margin: 4vh auto;
+  padding: 60px 40px; /* Plus d'espace en haut et en bas */
+
+  /* Ombre portée multi-couches (plus réaliste) */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02),
+    0 30px 60px rgba(135, 89, 210, 0.08); /* Rappel léger de ton violet */
+
+  box-sizing: border-box;
+
+  /* Animation d'entrée douce */
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optimisation pour Mobile */
+@media (max-width: 880px) {
+  .site-layout {
+    width: 95%; /* On gagne de la place sur mobile */
+    margin: 1.5vh auto;
+    padding: 30px 20px;
+    border-radius: 30px;
+  }
+}
+
+/* Masquer la barre de défilement tout en gardant le scroll (optionnel pour le style) */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(135, 89, 210, 0.3);
+  border-radius: 10px;
 }
