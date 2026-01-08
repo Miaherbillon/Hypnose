@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
-const fullText = "M'Hypnose : Votre séance d'hypnose à Besançon et en ligne.";
+const fullText = "M'Hypnose : Votre séance d'hypnose en ligne et à Besançon.";
 const typedText = ref("");
 let index = 0;
 let interval = null;
@@ -47,8 +47,8 @@ onUnmounted(() => {
         <p class="hero-description">
           Je suis <strong>Mia</strong>, praticienne certifiée en
           <strong>hypnose Elmanienne</strong>. Formée par l'école suisse
-          <strong>Omni</strong>, je vous accompagne avec bienveillance dans mon
-          cabinet de <strong>Besançon</strong> ou à distance vers un
+          <strong>Omni</strong>, je vous accompagne avec bienveillance à
+          domicile secteur de <strong>Besançon</strong> ou à distance vers un
           <strong>bien-être</strong> durable.
         </p>
         <p class="sub-text">
@@ -110,7 +110,7 @@ onUnmounted(() => {
         </div>
         <p class="duration"><strong>Durée : 1 heure environ</strong></p>
         <p class="session-details">
-          Séances réalisées sereinement en ligne (Google Meet) ou au cabinet.
+          Séances réalisées sereinement en ligne (Google Meet) ou à domicile.
         </p>
         <a href="#votre-lien-de-rdv" class="button-primary"
           >Réserver mon créneau</a
