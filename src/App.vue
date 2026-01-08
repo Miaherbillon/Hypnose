@@ -73,6 +73,7 @@ onMounted(() => {
   min-height: 100vh;
   font-family: "Quicksand", sans-serif;
   color: #333;
+  padding: 20px;
 }
 
 /* Loader Styles */
