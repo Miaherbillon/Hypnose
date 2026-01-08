@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
+// Importation des composants
 import HelloWorld from "./components/HelloWorld.vue";
 import Presentation from "./components/Presentation.vue";
 import RendezVous from "./components/Rendez-vous.vue";
@@ -11,82 +12,147 @@ import Contactez from "./components/Contactez.vue";
 const isLoading = ref(true);
 
 onMounted(() => {
-  // Un léger délai pour laisser les polices se charger proprement
+  // Délai optimisé pour le ressenti utilisateur
   setTimeout(() => {
     isLoading.value = false;
-  }, 500);
+  }, 600);
 });
 </script>
 
 <template>
   <div class="app-container">
-    <div v-if="isLoading" class="loader-container">
-      <div class="pulse-loader"></div>
-      <p class="loader-text">M'Hypnose</p>
-    </div>
-
-    <div v-else class="site-wrapper">
-      <Menu />
-      <div class="page-content">
-        <HelloWorld msg="M'Hypnose" />
-        <Presentation />
-        <RendezVous />
-        <Def />
-        <Contactez />
+    <transition name="fade">
+      <div
+        v-if="isLoading"
+        class="loader-container"
+        role="alert"
+        aria-busy="true">
+        <div class="pulse-loader"></div>
+        <h1 class="loader-text">M'Hypnose</h1>
       </div>
-      <Footer />
-    </div>
+
+      <div v-else class="site-wrapper">
+        <header>
+          <Menu />
+        </header>
+
+        <main id="main-content" class="page-content">
+          <h1 class="visually-hidden">
+            M'Hypnose : Cabinet d'Hypnose, EMDR et PNL
+          </h1>
+
+          <HelloWorld msg="M'Hypnose" />
+
+          <section id="presentation">
+            <Presentation />
+          </section>
+
+          <section id="services">
+            <Def />
+          </section>
+
+          <section id="rdv">
+            <RendezVous />
+          </section>
+
+          <section id="contact">
+            <Contactez />
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </transition>
   </div>
 </template>
 
 <style scoped>
+/* Reset & Base */
 .app-container {
-  /* Fond beige très clair/rosé pour le côté chaleureux */
-  background-color: #ffffff;
+  background-color: #fcfafc; /* Un blanc cassé légèrement rosé/violet pour la détente */
   min-height: 100vh;
   font-family: "Quicksand", sans-serif;
+  color: #333;
 }
 
-/* Loader plus doux (pulsation) */
+/* Loader Styles */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .pulse-loader {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: #9b6bc3;
   border-radius: 50%;
-  animation: pulse 1.5s infinite ease-in-out;
+  box-shadow: 0 0 20px rgba(155, 107, 195, 0.4);
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+.loader-text {
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: #9b6bc3;
+  text-transform: uppercase;
+}
+
+/* Animations de transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Conteneur de Page "Cocoon" */
+.page-content {
+  max-width: 1150px;
+  margin: 30px auto;
+  background: #ffffff;
+  /* Ombre plus douce et diffuse (effet Glassmorphism léger) */
+  box-shadow: 0 15px 35px rgba(155, 107, 195, 0.08);
+  border-radius: 40px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+/* Accessibilité SEO : Cache le titre H1 mais le laisse lisible par Google */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(0.8);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
+  0%,
   100% {
     transform: scale(0.8);
-    opacity: 0.5;
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
   }
 }
 
-/* Le contenu principal est dans une carte géante flottante */
-.page-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  background: white;
-  box-shadow: 0 20px 60px rgb(255, 255, 255); /* Ombre très légère */
-  border-radius: 40px; /* Coins très arrondis "cocoon" */
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   .page-content {
-    margin: 10px;
-    border-radius: 20px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 25px;
   }
 }
 </style>

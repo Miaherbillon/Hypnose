@@ -1,17 +1,22 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
-const typedText = ref("");
 const fullText = "M'Hypnose : Votre séance d'hypnose à Besançon et en ligne.";
+const typedText = ref("");
 let index = 0;
 let interval = null;
 
 onMounted(() => {
-  interval = setInterval(() => {
-    typedText.value = fullText.slice(0, index);
-    index++;
-    if (index > fullText.length) clearInterval(interval);
-  }, 70);
+  // On commence l'animation après un court délai
+  setTimeout(() => {
+    interval = setInterval(() => {
+      typedText.value = fullText.slice(0, index);
+      index++;
+      if (index > fullText.length) {
+        clearInterval(interval);
+      }
+    }, 60);
+  }, 500);
 });
 
 onUnmounted(() => {
@@ -26,23 +31,29 @@ onUnmounted(() => {
     </h1>
 
     <header class="hero-section">
-      <p aria-hidden="true" class="typed-heading">{{ typedText }}</p>
+      <div class="typed-container" aria-live="polite">
+        <p class="typed-heading" aria-hidden="true">
+          {{ typedText }}<span class="cursor">|</span>
+        </p>
+        <p class="visually-hidden">{{ fullText }}</p>
+      </div>
+
       <div class="hero-card">
-        <h2>
+        <h2 class="hero-title">
           Votre praticienne en <strong>hypnose</strong> à
-          <strong>Besançon (25000)</strong> et <strong>en ligne</strong>
+          <span class="city-tag">Besançon (25000)</span> et
+          <strong>en ligne</strong>
         </h2>
-        <p>
-          Je suis Mia, praticienne certifiée en
-          <strong>hypnose Elmanienne</strong>. Formée par l'école suisse Omni
-          depuis 2020, je vous accompagne avec bienveillance dans mon cabinet de
-          <strong>Besançon</strong> ou à distance vers un
+        <p class="hero-description">
+          Je suis <strong>Mia</strong>, praticienne certifiée en
+          <strong>hypnose Elmanienne</strong>. Formée par l'école suisse
+          <strong>Omni</strong>, je vous accompagne avec bienveillance dans mon
+          cabinet de <strong>Besançon</strong> ou à distance vers un
           <strong>bien-être</strong> durable.
         </p>
         <p class="sub-text">
-          Que vous habitiez à <strong>Besançon</strong>, dans le Doubs, ou
-          partout ailleurs en France, mes séances s'adaptent à vos besoins grâce
-          à la flexibilité de l'offre en ligne.
+          Que vous habitiez dans le Doubs ou partout ailleurs en France, mes
+          séances s'adaptent à vos besoins en visio ou en présentiel.
         </p>
       </div>
     </header>
@@ -52,275 +63,223 @@ onUnmounted(() => {
         Pourquoi consulter pour de l'<strong>hypnose à Besançon</strong> ?
       </h2>
 
-      <div class="intro-benefits">
-        <p>
-          Nos émotions peuvent parfois nous submerger. L'hypnose offre une
-          approche douce pour les explorer et les apaiser.
-        </p>
-      </div>
-
       <div class="services-grid">
         <div class="service-card">
-          <div class="icon">✅</div>
+          <div class="icon-wrapper">✅</div>
           <h3>Libération</h3>
           <p>
-            Gestion de l'anxiété, du <strong>stress</strong> et des phobies à
-            Besançon.
+            Gestion de l'anxiété, du <strong>stress</strong> et des phobies.
           </p>
         </div>
         <div class="service-card">
-          <div class="icon">💪</div>
+          <div class="icon-wrapper">💪</div>
           <h3>Confiance</h3>
           <p>Renforcement de l'estime de soi et dépassement des blocages.</p>
         </div>
         <div class="service-card">
-          <div class="icon">😴</div>
+          <div class="icon-wrapper">😴</div>
           <h3>Sommeil</h3>
-          <p>Amélioration de la qualité de vos nuits et relaxation profonde.</p>
+          <p>Retrouvez des nuits paisibles et une relaxation profonde.</p>
         </div>
         <div class="service-card">
-          <div class="icon">🚬</div>
+          <div class="icon-wrapper">🚬</div>
           <h3>Addictions</h3>
-          <p>
-            Gestion des addictions et <strong>sevrage tabagique</strong> par
-            l'hypnose.
-          </p>
-        </div>
-        <div class="service-card">
-          <div class="icon">🤕</div>
-          <h3>Douleurs</h3>
-          <p>Atténuation des douleurs chroniques (en complément médical).</p>
+          <p>Sevrage tabagique et gestion des dépendances par l'hypnose.</p>
         </div>
       </div>
     </section>
 
     <section class="info-card elmanienne">
-      <h2>L'Hypnose Elmanienne</h2>
-      <p>
-        Une méthode <strong>rapide et directe</strong>, reconnue pour son
-        efficacité à résoudre des problématiques spécifiques. Cette technique
-        favorise un état de transe profonde permettant des résultats concrets à
-        <strong>Besançon</strong>.
-      </p>
-      <a href="#info" class="link-more-info">Découvrir la méthode Omni →</a>
+      <div class="info-content">
+        <h2>L'Hypnose Elmanienne</h2>
+        <p>
+          Une méthode <strong>rapide et directe</strong>, reconnue mondialement
+          pour son efficacité. Cette technique favorise un état de transe
+          profonde permettant des résultats concrets à
+          <strong>Besançon</strong>.
+        </p>
+        <a href="#info" class="link-more-info">Découvrir la méthode Omni →</a>
+      </div>
     </section>
 
     <section class="section-sessions">
       <div class="tarif-card">
         <div class="badge">Séance Individuelle</div>
-        <div class="price">70€</div>
-        <p><strong>Durée : 1 heure environ</strong></p>
-        <p>
-          Séances réalisées sereinement à distance (Google Meet) ou en cabinet à
-          Besançon.
+        <div class="price-container">
+          <span class="price">70</span><span class="currency">€</span>
+        </div>
+        <p class="duration"><strong>Durée : 1 heure environ</strong></p>
+        <p class="session-details">
+          Séances réalisées sereinement en ligne (Google Meet) ou au cabinet.
         </p>
         <a href="#votre-lien-de-rdv" class="button-primary"
           >Réserver mon créneau</a
         >
       </div>
     </section>
-
-    <footer class="section-cta">
-      <h2>Prêt(e) pour le changement ?</h2>
-      <p>
-        Contactez-moi dès aujourd'hui pour planifier votre
-        <strong>séance d'hypnose à Besançon</strong> ou en visio.
-      </p>
-    </footer>
   </main>
 </template>
 
 <style scoped>
-/* BASES ET TYPOGRAPHIE 2026 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap");
+/* POLICES */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Playfair+Display:wght@700&display=swap");
 
 .container {
-  font-family: "Poppins", sans-serif;
-  color: #2d2d2d;
-  width: 90%;
-  max-width: 950px;
+  font-family: "Quicksand", sans-serif;
+  color: #333;
+  max-width: 1000px;
   margin: auto;
-  line-height: 1.7;
-  padding: 40px 0;
+  line-height: 1.8;
+  padding: 20px;
 }
 
+/* SEO UTILS */
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 strong {
-  color: rgb(135, 89, 210);
-  font-weight: 600;
+  color: #8759d2;
+  font-weight: 700;
 }
 
-/* HERO SECTION */
-.hero-section {
-  text-align: center;
-  margin-bottom: 60px;
+/* HERO */
+.typed-container {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .typed-heading {
-  font-size: 1.6em;
-  font-weight: bold;
-  color: #1a1a1a;
-  min-height: 2em;
-  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin: 0;
+}
+
+.cursor {
+  color: #8759d2;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-card {
-  background-color: #fdfaff;
-  padding: 40px;
-  border-radius: 30px;
-  box-shadow: 0 10px 30px rgba(135, 89, 210, 0.05);
+  background: linear-gradient(135deg, #ffffff 0%, #fdfaff 100%);
+  padding: 50px 30px;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(135, 89, 210, 0.05);
   border: 1px solid rgba(135, 89, 210, 0.1);
+  margin-top: 20px;
 }
 
-.sub-text {
-  font-size: 0.95em;
-  color: #666;
-  margin-top: 15px;
-}
-
-/* SERVICES GRID */
-.section-title {
+.hero-title {
   font-family: "Playfair Display", serif;
-  text-align: center;
-  margin-bottom: 20px;
   font-size: 2.2em;
+  margin-bottom: 20px;
+  line-height: 1.3;
 }
 
-.intro-benefits {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #555;
+.city-tag {
+  background: #f0eaff;
+  padding: 2px 10px;
+  border-radius: 8px;
+  color: #8759d2;
 }
 
+/* SERVICES */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
-  margin-bottom: 60px;
+  margin: 40px 0;
 }
 
 .service-card {
-  background: white;
-  padding: 35px 25px;
-  border-radius: 25px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 30px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s ease;
-  border: 1px solid #f9f9f9;
+  border: 1px solid #f1f1f1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(135, 89, 210, 0.1);
-  border-color: rgba(135, 89, 210, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(135, 89, 210, 0.1);
 }
 
-.service-card .icon {
+.icon-wrapper {
   font-size: 2.5em;
   margin-bottom: 15px;
-}
-
-.service-card h3 {
-  font-family: "Playfair Display", serif;
-  margin-bottom: 12px;
-  font-size: 1.4em;
-}
-
-/* INFO CARD */
-.info-card {
-  background: #f8f9fa;
-  padding: 50px 40px;
-  border-radius: 30px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-.link-more-info {
-  display: inline-block;
-  margin-top: 20px;
-  color: rgb(135, 89, 210);
-  text-decoration: none;
-  font-weight: 600;
+  display: block;
 }
 
 /* TARIF CARD */
 .tarif-card {
   background: white;
-  border: 1px solid #f0eaff;
-  padding: 50px 30px;
+  padding: 40px;
   border-radius: 40px;
   text-align: center;
-  max-width: 450px;
-  margin: 0 auto 60px;
-  box-shadow: 0 20px 50px rgba(135, 89, 210, 0.08);
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 20px 50px rgba(135, 89, 210, 0.12);
+  border: 1px solid #f0eaff;
 }
 
 .price {
-  font-size: 4em;
-  font-weight: bold;
-  color: rgb(135, 89, 210);
-  margin: 10px 0;
+  font-size: 5em;
+  font-weight: 700;
+  color: #8759d2;
+  letter-spacing: -2px;
 }
 
-.badge {
-  display: inline-block;
-  background: #f0eaff;
-  color: rgb(135, 89, 210);
-  padding: 6px 20px;
-  border-radius: 25px;
-  font-size: 0.9em;
-  font-weight: bold;
+.currency {
+  font-size: 2em;
+  vertical-align: super;
+  color: #8759d2;
 }
 
-/* BOUTON */
 .button-primary {
-  display: inline-block;
-  background-color: rgb(135, 89, 210);
+  display: block;
+  background: #8759d2;
   color: white;
-  padding: 20px 40px;
+  padding: 18px;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
-  margin-top: 30px;
-  box-shadow: 0 10px 20px rgba(135, 89, 210, 0.2);
+  font-weight: 700;
   transition: all 0.3s ease;
+  margin-top: 25px;
 }
 
 .button-primary:hover {
-  background-color: rgb(110, 60, 180);
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(135, 89, 210, 0.3);
-}
-
-.section-cta {
-  text-align: center;
-  padding: 40px 0;
+  background: #6e3cb4;
+  box-shadow: 0 10px 20px rgba(110, 60, 180, 0.3);
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
-  .section-title {
-    font-size: 1.8em;
-  }
-  .hero-card {
-    padding: 25px;
+  .hero-title {
+    font-size: 1.6em;
   }
   .price {
-    font-size: 3em;
+    font-size: 4em;
   }
   .typed-heading {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 }
 </style>
