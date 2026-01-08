@@ -120,8 +120,8 @@ body {
   background-color: #ffffff;
   /* On remplace la bordure noire par une ombre douce et un contour violet très fin */
   border-radius: 50px;
-  box-shadow: 0 20px 60px rgba(155, 107, 195, 0.08);
-  border: 1px solid rgba(155, 107, 195, 0.05);
+  /*box-shadow: 0 20px 60px rgba(155, 107, 195, 0.08);
+  /*border: 1px solid rgba(155, 107, 195, 0.05);
   overflow: hidden; /* Pour que les arrondis s'appliquent au contenu */
   padding-bottom: 40px;
 }
