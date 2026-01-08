@@ -19,76 +19,74 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="app-wrapper">
+  <div class="app-container">
     <div v-if="isLoading" class="loader-container">
-      <div class="spinner"></div>
-      <p class="loader-text">M'Hypnose Besançon...</p>
+      <div class="pulse-loader"></div>
+      <p class="loader-text">M'Hypnose</p>
     </div>
 
-    <div v-else class="main-layout">
-      <Menu /> <HelloWorld msg="M'Hypnose" />
-      <Presentation />
-      <RendezVous />
-      <Def />
-      <Contactez />
+    <div v-else class="site-wrapper">
+      <Menu />
+      <div class="page-content">
+        <HelloWorld msg="M'Hypnose" />
+        <Presentation />
+        <RendezVous />
+        <Def />
+        <Contactez />
+      </div>
       <Footer />
     </div>
   </div>
 </template>
 
 <style scoped>
-/* LOADER AUX COULEURS DU SITE */
-.loader-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #fdfaff; /* Fond doux */
+.app-container {
+  /* Fond beige très clair/rosé pour le côté chaleureux */
+  background-color: #fdfaf8;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
 }
 
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 4px solid rgba(135, 89, 210, 0.1);
-  border-top: 4px solid rgb(135, 89, 210); /* Ton violet */
+/* Loader plus doux (pulsation) */
+.pulse-loader {
+  width: 50px;
+  height: 50px;
+  background-color: #9b6bc3;
   border-radius: 50%;
-  animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-  margin-bottom: 20px;
+  animation: pulse 1.5s infinite ease-in-out;
 }
 
-.loader-text {
-  font-family: "Poppins", sans-serif;
-  color: rgb(135, 89, 210);
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
   }
 }
 
-/* STYLE PRINCIPAL - FINI LES BORDURES NOIRES ÉPAISSES */
-.main-layout {
-  min-height: 100vh;
-  background-color: #ffffff;
-  /* On retire la grosse bordure noire pour un design plus "aérien" */
-  transition: opacity 0.5s ease;
+/* Le contenu principal est dans une carte géante flottante */
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.03); /* Ombre très légère */
+  border-radius: 40px; /* Coins très arrondis "cocoon" */
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
-
-/* Si tu veux garder un cadre très léger et élégant, utilise celui-ci : */
-/* .main-layout {
-  border: 1px solid rgba(135, 89, 210, 0.1);
-  margin: 10px;
-  border-radius: 20px;
-}
-*/
 
 @media (max-width: 768px) {
-  .main-layout {
-    border: none; /* Pas de bordure sur mobile pour gagner de l'espace */
+  .page-content {
+    margin: 10px;
+    border-radius: 20px;
   }
 }
 </style>
