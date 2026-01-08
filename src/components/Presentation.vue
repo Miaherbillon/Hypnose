@@ -126,7 +126,7 @@ onUnmounted(() => {
 
 .container {
   font-family: "Quicksand", sans-serif;
-  color: #333;
+  color: #6c6767;
   max-width: 1000px;
   margin: auto;
   line-height: 1.8;
@@ -148,7 +148,7 @@ onUnmounted(() => {
 }
 
 strong {
-  color: #8759d2;
+  color: #9d80cb;
   font-weight: 700;
 }
 
@@ -163,12 +163,12 @@ strong {
 .typed-heading {
   font-size: 1.8em;
   font-weight: 700;
-  color: #2d2d2d;
+  color: #6c6767;
   margin: 0;
 }
 
 .cursor {
-  color: #8759d2;
+  color: #9d80cb;
   animation: blink 1s infinite;
 }
 
@@ -198,7 +198,7 @@ strong {
   background: #ffffffa5;
   padding: 2px 10px;
   border-radius: 8px;
-  color: #8759d2;
+  color: #9d80cb;
 }
 
 /* SERVICES */
@@ -244,19 +244,19 @@ strong {
 .price {
   font-size: 5em;
   font-weight: 700;
-  color: #8759d2;
+  color: #9d80cb;
   letter-spacing: -2px;
 }
 
 .currency {
   font-size: 2em;
   vertical-align: super;
-  color: #8759d2;
+  color: #9d80cb;
 }
 
 .button-primary {
   display: block;
-  background: #8759d2;
+  background: #6e3cb480;
   color: white;
   padding: 18px;
   border-radius: 50px;

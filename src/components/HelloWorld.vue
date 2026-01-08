@@ -17,7 +17,7 @@ import fontImage from "/src/assets/Font.png";
   margin: 1em auto;
   padding: 0.5em;
   border-radius: 50em;
-  color: #000000;
+  color: #6c6767;
   display: flex;
   justify-content: center;
   align-items: center;

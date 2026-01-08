@@ -16,7 +16,7 @@ import { ref } from "vue";
   display: flex;
   justify-content: center;
   font-size: 0.8em;
-  color: #555; /* Une couleur légèrement plus douce pour améliorer l'aspect visuel */
+  color: #ffffff; /* Une couleur légèrement plus douce pour améliorer l'aspect visuel */
 }
 
 @media (max-width: 768px) {

@@ -37,9 +37,7 @@ onMounted(() => {
         </header>
 
         <main id="main-content" class="page-content">
-          <h1 class="visually-hidden">
-            M'Hypnose : Cabinet d'Hypnose, EMDR et PNL
-          </h1>
+          <h1 class="visually-hidden">M'Hypnose</h1>
 
           <HelloWorld msg="M'Hypnose" />
 
@@ -98,7 +96,7 @@ onMounted(() => {
   margin-top: 20px;
   font-weight: 300;
   letter-spacing: 3px;
-  color: #9b6bc3;
+  color: #9d80cb;
   text-transform: uppercase;
 }
 
