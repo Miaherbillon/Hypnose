@@ -20,7 +20,7 @@ onMounted(() => {
   // 2. SEO - AJOUT EN LIGNE (Sans installation requise)
   // Définition du Titre de l'onglet
   document.title =
-    "M'Hypnose - Hypnothérapeute à Besançon et en ligne - HERBILLON Mia";
+    "M'Hypnose - Hypnothérapeute à votre domicile sur Besançon ou en Visio - HERBILLON Mia";
 
   // Ajout dynamique de la Meta Description pour Google
   let metaDesc = document.querySelector('meta[name="description"]');
@@ -30,7 +30,7 @@ onMounted(() => {
     document.head.appendChild(metaDesc);
   }
   metaDesc.content =
-    "Cabinet M'Hypnose à Besançone et en ligne. Séances d'hypnothérapie pour l'arrêt du tabac, la gestion du stress, la perte de poids et le bien-être.";
+    "Cabinet M'Hypnose à votre domicile sur Besançon ou en Visio. Séances d'hypnothérapie pour l'arrêt du tabac, la gestion du stress, la perte de poids et le bien-être.";
 });
 </script>
 

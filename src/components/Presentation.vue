@@ -1,7 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
-const fullText = "M'Hypnose : Votre séance d'hypnose en ligne et à Besançon.";
+const fullText =
+  "M'Hypnose : Votre séance d'hypnose à votre domicile sur Besançon ou en Visio.";
 const typedText = ref("");
 let index = 0;
 let interval = null;
@@ -27,7 +28,8 @@ onUnmounted(() => {
 <template>
   <main class="container">
     <h1 class="visually-hidden">
-      M'Hypnose - Mia Herbillon, Hypnothérapeute à Besançon et séances en ligne
+      M'Hypnose - Mia Herbillon, Hypnothérapeute à votre domicile sur Besançon
+      ou en Visio
     </h1>
 
     <header class="hero-section">
