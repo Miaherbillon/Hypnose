@@ -62,7 +62,7 @@ onMounted(() => {
 
       <main id="main-content" class="page-content">
         <h1 class="visually-hidden">
-          M'Hypnose - Cabinet d'Hypnose à Saint-Vit
+          M'Hypnose - Cabinet d'Hypnose à Besançon
         </h1>
 
         <HelloWorld msg="M'Hypnose" />

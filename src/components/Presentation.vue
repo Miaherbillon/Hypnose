@@ -40,8 +40,9 @@ onUnmounted(() => {
 
       <div class="hero-card">
         <h2 class="hero-title">
-          Votre praticienne en <strong>hypnose</strong> à
-          <span class="city-tag">Besançon (25000)</span> et
+          Votre praticienne en <strong>hypnose</strong> à<span class="city-tag"
+            >Besançon</span
+          >et
           <strong>en ligne</strong>
         </h2>
         <p class="hero-description">
@@ -53,14 +54,14 @@ onUnmounted(() => {
         </p>
         <p class="sub-text">
           Que vous habitiez dans le Doubs ou partout ailleurs en France, mes
-          séances s'adaptent à vos besoins en visio ou en présentiel.
+          séances s'adaptent à vos besoins en visio ou en présentiel à domicile.
         </p>
       </div>
     </header>
 
     <section class="section-benefits">
       <h2 class="section-title">
-        Pourquoi consulter pour de l'<strong>hypnose à Besançon</strong> ?
+        Pourquoi consulter pour de l'<strong>hypnose</strong> ?
       </h2>
 
       <div class="services-grid">
