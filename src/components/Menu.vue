@@ -5,7 +5,7 @@ import { ref } from "vue";
 <template>
   <div>
     <a href="#contact">CONTACTEZ-MOI</a>
-    <a href="#reservation">RESERVATION</a>
+    <a href="#votre-lien-de-rdv">RESERVATION</a>
   </div>
 </template>
 
