@@ -12,75 +12,106 @@ import Contactez from "./components/Contactez.vue";
 const isLoading = ref(true);
 
 onMounted(() => {
-  // Délai optimisé pour le ressenti utilisateur
+  // 1. GESTION DU LOADER
   setTimeout(() => {
     isLoading.value = false;
   }, 600);
+
+  // 2. SEO - AJOUT EN LIGNE (Sans installation requise)
+  // Définition du Titre de l'onglet
+  document.title =
+    "M'Hypnose - Hypnothérapeute à Besançon et en ligne - HERBILLON Mia";
+
+  // Ajout dynamique de la Meta Description pour Google
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) {
+    metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    document.head.appendChild(metaDesc);
+  }
+  metaDesc.content =
+    "Cabinet M'Hypnose à Besançone et en ligne. Séances d'hypnothérapie pour l'arrêt du tabac, la gestion du stress, la perte de poids et le bien-être.";
 });
 </script>
 
 <template>
   <div class="app-container">
+    <component :is="'script'" type="application/ld+json">
+      { "@context": "https://schema.org", "@type": "MedicalBusiness", "name":
+      "M'Hypnose", "description": "Cabinet d'hypnothérapie à Besançon.",
+      "address": { "@type": "PostalAddress", "streetAddress": "VOTRE ADRESSE
+      ICI", "addressLocality": "Besançon", "postalCode": "25000",
+      "addressCountry": "FR" }, "priceRange": "$$" }
+    </component>
+
     <transition name="fade">
       <div
         v-if="isLoading"
-        class="loader-container"
+        class="loader-overlay"
         role="alert"
         aria-busy="true">
         <div class="pulse-loader"></div>
         <h1 class="loader-text">M'Hypnose</h1>
       </div>
-
-      <div v-else class="site-wrapper">
-        <header>
-          <Menu />
-        </header>
-
-        <main id="main-content" class="page-content">
-          <h1 class="visually-hidden">M'Hypnose</h1>
-
-          <HelloWorld msg="M'Hypnose" />
-
-          <section id="presentation">
-            <Presentation />
-          </section>
-
-          <section id="services">
-            <Def />
-          </section>
-
-          <section id="rdv">
-            <RendezVous />
-          </section>
-
-          <section id="contact">
-            <Contactez />
-          </section>
-        </main>
-
-        <Footer />
-      </div>
     </transition>
+
+    <div class="site-wrapper" :class="{ 'blur-content': isLoading }">
+      <header>
+        <Menu />
+      </header>
+
+      <main id="main-content" class="page-content">
+        <h1 class="visually-hidden">
+          M'Hypnose - Cabinet d'Hypnose à Saint-Vit
+        </h1>
+
+        <HelloWorld msg="M'Hypnose" />
+
+        <section id="presentation">
+          <Presentation />
+        </section>
+
+        <section id="services">
+          <Def />
+        </section>
+
+        <section id="rdv">
+          <RendezVous />
+        </section>
+
+        <section id="contact">
+          <Contactez />
+        </section>
+      </main>
+
+      <Footer />
+    </div>
   </div>
 </template>
 
 <style scoped>
 /* Reset & Base */
 .app-container {
-  /* background-color: #fcfafc; Un blanc cassé légèrement rosé/violet pour la détente */
   min-height: 100vh;
   font-family: "Quicksand", sans-serif;
   color: #333;
   padding: 20px;
+  position: relative;
 }
 
-/* Loader Styles */
-.loader-container {
+/* Loader Styles - Overlay Fixe */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fcfafc;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .pulse-loader {
@@ -110,19 +141,25 @@ onMounted(() => {
   opacity: 0;
 }
 
-/* Conteneur de Page "Cocoon" */
+/* Conteneur de Page */
 .page-content {
   max-width: 1150px;
   margin: 30px auto;
   background: #ffffff87;
-  /* Ombre plus douce et diffuse (effet Glassmorphism léger) */
   box-shadow: 0 15px 35px rgba(155, 107, 195, 0.08);
   border-radius: 40px;
   padding: 40px;
   transition: all 0.3s ease;
 }
 
-/* Accessibilité SEO : Cache le titre H1 mais le laisse lisible par Google */
+/* Effet de flou pendant le chargement */
+.blur-content {
+  filter: blur(5px);
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Accessibilité SEO : Cache le texte visuellement */
 .visually-hidden {
   position: absolute;
   width: 1px;
