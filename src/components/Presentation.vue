@@ -282,14 +282,14 @@ strong {
     padding: 25px 15px !important;
   }
   .hero-description {
-    font-size: 0.7em !important;
+    font-size: 0.8em !important;
   }
 
   .services-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
   .service-card p {
-    font-size: 0.7em !important;
+    font-size: 0.8em !important;
   }
 
   .price {
@@ -299,7 +299,7 @@ strong {
     font-size: 1.2em;
   }
   .info-card p {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
 </style>
