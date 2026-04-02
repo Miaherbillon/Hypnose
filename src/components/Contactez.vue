@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="contact-container">
+  <section class="contact-container" id="contact">
     <div class="contact-card">
       <h2 class="section-title">Une question ?</h2>
       <p class="contact-intro">
