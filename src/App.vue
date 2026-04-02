@@ -10,7 +10,6 @@ import Footer from "./components/Footer.vue";
 import RendezVous from "./components/Rendez-vous.vue";
 import Contactez from "./components/Contactez.vue";
 
-// Ajoute tes autres imports ici (Menu, Footer, etc.) au besoin
 
 const isLoading = ref(true);
 
