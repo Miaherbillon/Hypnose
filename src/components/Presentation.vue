@@ -88,7 +88,7 @@ onUnmounted(() => {
       </div>
       <p><strong>Séance d'environ 1h</strong></p>
       <p>Visio ou domicile (Besançon).</p>
-      <a href="#votre-lien-de-rdv" class="button-primary">Prendre RDV</a>
+      <a href="#votre-lien-de-rdv" class="button-primary">Réserve ta séance</a>
     </div>
   </div>
 </template>
