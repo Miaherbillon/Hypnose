@@ -13,8 +13,9 @@ import { ref } from "vue";
 div {
   display: flex;
   justify-content: center;
-  margin: auto;
+  /* margin: auto; */
   gap: 2em;
+  padding-top: 1.5em;
 }
 a {
   text-decoration: none;
@@ -27,7 +28,7 @@ a:hover {
 }
 @media (max-width: 880px) {
   a {
-    font-size: 0.7em;
+    font-size: 0.5em;
     color: rgb(135, 89, 210);
   }
 }

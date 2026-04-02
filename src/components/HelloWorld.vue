@@ -1,53 +1,94 @@
 <script setup>
-import { ref } from "vue";
-import fontImage from "/src/assets/Font.png";
+// L'image fontImage n'est pas utilisée dans ton template,
+// je l'enlève pour nettoyer le code.
 </script>
 
 <template>
-  <h1 class="title">M'Hypnose</h1>
-  <FontAwesomeIcon icon="fa-solid fa-arrow-down-long" beat />
+  <div class="title-wrapper">
+    <h1 class="main-title">M'Hypnose</h1>
+    <div class="icon-container">
+      <FontAwesomeIcon
+        icon="fa-solid fa-arrow-down-long"
+        beat
+        class="arrow-icon" />
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.title {
-  /* font-family: "Rubik Gemstones", serif; */
-  /* font-family: "Fredericka the Great", serif; */
-  font-family: "Yuji Syuku", serif;
-  width: 60%;
-  margin: 1em auto;
-  padding: 0.5em;
-  border-radius: 50em;
-  color: #6c6767;
+.title-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: white;
-  box-sizing: border-box;
-  text-align: center;
-}
-h1 {
-  box-sizing: border-box;
-  border: 0.3em solid white;
-  border-radius: 50%;
-  overflow: hidden;
-  font-size: 3.3em;
-  text-align: center;
-  box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.6);
+  /* margin: 2em auto; */
+  width: 100%;
 }
 
-/* 📱 Responsive pour téléphones */
-@media (max-width: 880px) {
-  .title {
-    font-family: "Poiret One", serif;
-    font-size: 1.7em;
-    width: 80%;
-    padding: 1em 2em;
-    border-radius: 5em;
+.main-title {
+  /* On utilise Playfair pour le côté premium/bien-être */
+  font-family: "Playfair Display", serif;
+  font-size: 3.5em;
+  color: #444;
+
+  /* Structure de la "bulle" */
+  background-color: white;
+  padding: 0.2em 1.5em;
+  border-radius: 100px; /* Effet pillule plutôt que cercle parfait */
+
+  /* Ombre très douce pour rester zen */
+  box-shadow: 0 10px 30px rgba(157, 128, 203, 0.15);
+
+  border: 4px solid white;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.icon-container {
+  margin-top: 1.5em;
+}
+
+.arrow-icon {
+  color: #9d80cb;
+  font-size: 1.5em;
+}
+
+/* RESPONSIVE CIBLÉ : SUPPRESSION DES ESPACES */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
   }
 
-  h1 {
-    font-size: 1em;
-    border-width: 0.2em;
+  /* 1. On rapproche le titre M'Hypnose du haut de l'écran */
+  header.hero-section {
+    margin-top: 5px; /* On réduit l'espace avant le header */
+  }
+
+  /* 2. On réduit la bulle blanche elle-même */
+  .title-wrapper h1 {
+    font-size: 1.5em !important;
+    padding: 0.3em 1.2em; /* Réduction drastique du vide interne */
+    margin: 0 !important; /* On annule les marges autour du titre */
+    border-radius: 25px; /* Arrondi plus adapté à la petite taille */
+  }
+
+  /* 3. On réduit l'espace vertical entre la pillule et le texte */
+  .typed-container {
+    /* C'est ce min-height qui crée le grand vide. On le casse. */
+    min-height: auto !important;
+    margin-top: 15px !important; /* C'est tout l'espace qu'il faut */
+    padding: 0 10px !important;
+  }
+
+  /* 4. On adapte le texte de la machine à écrire */
+  .typed-heading {
+    font-size: 1.05em !important;
+    line-height: 1.3 !important;
+    color: #888;
+  }
+
+  /* 5. Flèche et autres éléments */
+  .icon-container {
+    margin-top: 5px !important;
   }
 }
 </style>

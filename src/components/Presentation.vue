@@ -2,13 +2,12 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const fullText =
-  "M'Hypnose : Votre séance d'hypnose à votre domicile sur Besançon ou en Visio.";
+  "M'Hypnose : Votre séance d'hypnose OMNI & Elmanienne en Visio.";
 const typedText = ref("");
 let index = 0;
 let interval = null;
 
 onMounted(() => {
-  // On commence l'animation après un court délai
   setTimeout(() => {
     interval = setInterval(() => {
       typedText.value = fullText.slice(0, index);
@@ -16,7 +15,7 @@ onMounted(() => {
       if (index > fullText.length) {
         clearInterval(interval);
       }
-    }, 60);
+    }, 50);
   }, 500);
 });
 
@@ -28,117 +27,103 @@ onUnmounted(() => {
 <template>
   <main class="container">
     <h1 class="visually-hidden">
-      M'Hypnose - Mia Herbillon, Hypnothérapeute à votre domicile sur Besançon
-      ou en Visio
+      M'Hypnose - Mia Herbillon, Praticienne certifiée OMNI Hypnosis
     </h1>
 
     <header class="hero-section">
       <div class="typed-container" aria-live="polite">
-        <p class="typed-heading" aria-hidden="true">
+        <p class="typed-heading">
           {{ typedText }}<span class="cursor">|</span>
         </p>
-        <p class="visually-hidden">{{ fullText }}</p>
       </div>
 
       <div class="hero-card">
-        <h2 class="hero-title">
-          Votre praticienne en <strong>hypnose</strong> à<span class="city-tag"
-            >Besançon</span
-          >et
-          <strong>en ligne</strong>
-        </h2>
+        <h2 class="section-title">Votre praticienne <strong>OMNI</strong></h2>
         <p class="hero-description">
-          Je suis <strong>Mia</strong>, praticienne certifiée en
-          <strong>hypnose Elmanienne</strong>. Formée par l'école suisse
-          <strong>Omni</strong>, je vous accompagne avec bienveillance à
-          domicile secteur de <strong>Besançon</strong> ou à distance vers un
-          <strong>bien-être</strong> durable.
-        </p>
-        <p class="sub-text">
-          Que vous habitiez dans le Doubs ou partout ailleurs en France, mes
-          séances s'adaptent à vos besoins en visio ou en présentiel à domicile.
+          Je suis <strong>Mia</strong>, aide-soignante de métier et praticienne
+          certifiée
+          <a
+            href="https://www.mhp-hypnose.com/lhistoire-de-omni"
+            target="_blank"
+            class="external-link">
+            <strong>OMNI Hypnosis *</strong> </a
+          >. J'allie mon expertise du soin à la seule méthode d'hypnose au monde
+          certifiée
+          <a
+            href="https://www.mhp-hypnose.com/reconnaissances"
+            target="_blank"
+            class="external-link">
+            <strong>ISO 9001 *</strong> </a
+          >. Une approche <strong>orientée résultat</strong> pour transformer
+          vos blocages en ressources durables.
         </p>
       </div>
     </header>
 
     <section class="section-benefits">
-      <h2 class="section-title">
-        Pourquoi consulter pour de l'<strong>hypnose</strong> ?
-      </h2>
-
+      <h2 class="section-title">Pourquoi consulter ?</h2>
       <div class="services-grid">
         <div class="service-card">
-          <div class="icon-wrapper">✅</div>
-          <h3>Libération</h3>
-          <p>
-            Gestion de l'anxiété, du <strong>stress</strong> et des phobies.
-          </p>
+          <span class="icon-wrapper">🎯</span>
+          <h3>Efficacité</h3>
+          <p>Résultats souvent visibles en <strong>1 à 3 séances</strong>.</p>
         </div>
         <div class="service-card">
-          <div class="icon-wrapper">💪</div>
+          <span class="icon-wrapper">💪</span>
           <h3>Confiance</h3>
-          <p>Renforcement de l'estime de soi et dépassement des blocages.</p>
+          <p>Libération émotionnelle et estime de soi.</p>
         </div>
         <div class="service-card">
-          <div class="icon-wrapper">😴</div>
-          <h3>Sommeil</h3>
-          <p>Retrouvez des nuits paisibles et une relaxation profonde.</p>
+          <span class="icon-wrapper">⚓</span>
+          <h3>Stabilité</h3>
+          <p>Gestion du <strong>stress</strong> et des phobies.</p>
         </div>
         <div class="service-card">
-          <div class="icon-wrapper">🚬</div>
+          <span class="icon-wrapper">🚬</span>
           <h3>Addictions</h3>
-          <p>Sevrage tabagique et gestion des dépendances par l'hypnose.</p>
+          <p>Protocole OMNI pour le sevrage tabagique.</p>
         </div>
       </div>
     </section>
 
     <section class="info-card elmanienne">
       <div class="info-content">
-        <h2>L'Hypnose Elmanienne</h2>
+        <h2 class="section-title">La Méthode OMNI</h2>
         <p>
-          Une méthode <strong>rapide et directe</strong>, reconnue mondialement
-          pour son efficacité. Cette technique favorise un état de transe
-          profonde permettant des résultats concrets à
-          <strong>Besançon</strong>.
+          Basée sur les travaux de <strong>Dave Elman</strong>, elle permet
+          d'atteindre un état hypnotique profond en quelques minutes pour agir
+          directement sur la cause.
         </p>
-        <a href="#info" class="link-more-info">Découvrir la méthode Omni →</a>
       </div>
     </section>
 
     <section class="section-sessions">
       <div class="tarif-card">
-        <div class="badge">Séance Individuelle</div>
         <div class="price-container">
           <span class="price">70</span><span class="currency">€</span>
         </div>
-        <p class="duration"><strong>Durée : 1 heure environ</strong></p>
-        <p class="session-details">
-          Séances réalisées sereinement en ligne (Google Meet) ou à domicile.
-        </p>
-        <a href="#votre-lien-de-rdv" class="button-primary"
-          >Réserver mon créneau</a
-        >
+        <p class="duration"><strong>Séance d'environ 1h</strong></p>
+        <p class="session-details">En visio</p>
+        <a href="#votre-lien-de-rdv" class="button-primary">Prendre RDV</a>
       </div>
     </section>
   </main>
 </template>
 
 <style scoped>
-/* POLICES */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Playfair+Display:wght@700&display=swap");
 
+/* --- BASES --- */
 .container {
   font-family: "Quicksand", sans-serif;
   color: #6c6767;
   max-width: 1000px;
   margin: auto;
-  line-height: 1.8;
+  line-height: 1.6;
   padding: 20px;
 }
 
-/* SEO UTILS */
 .visually-hidden {
-  background: #ffffffa5;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -155,135 +140,166 @@ strong {
   font-weight: 700;
 }
 
-/* HERO */
+/* --- TITRES HARMONISÉS --- */
+/* Le titre tout en haut (si tu as un composant Title séparé) doit être plus gros. 
+   Ici, nous gérons tous les titres de sections internes. */
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8em; /* Taille fixe pour tous les H2 */
+  color: #444;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* --- MACHINE À ÉCRIRE --- */
 .typed-container {
-  min-height: 80px;
+  min-height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin-bottom: 5px;
 }
-
 .typed-heading {
-  font-size: 1.8em;
-  font-weight: 700;
-  color: #6c6767;
-  margin: 0;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #888;
 }
-
 .cursor {
   color: #9d80cb;
   animation: blink 1s infinite;
 }
-
 @keyframes blink {
   50% {
     opacity: 0;
   }
 }
 
-.hero-card {
+/* --- CARTES ET GRILLES --- */
+.hero-card,
+.tarif-card,
+.info-card {
   background: #ffffffa5;
-  padding: 50px 30px;
   border-radius: 40px;
-  box-shadow: 0 20px 40px rgba(135, 89, 210, 0.05);
+  box-shadow: 0 15px 35px rgba(135, 89, 210, 0.05);
   border: 1px solid rgba(135, 89, 210, 0.1);
-  margin-top: 20px;
+  text-align: center;
+  padding: 35px 25px;
+  margin-bottom: 30px;
 }
 
-.hero-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2.2em;
-  margin-bottom: 20px;
-  line-height: 1.3;
+.hero-description {
+  font-size: 1.1em;
+  color: #666;
 }
 
-.city-tag {
-  background: #ffffffa5;
-  padding: 2px 10px;
-  border-radius: 8px;
-  color: #9d80cb;
-}
-
-/* SERVICES */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin: 40px 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 25px 0;
 }
-
 .service-card {
-  background: #ffffffa5;
-  padding: 30px;
-  border-radius: 30px;
+  background: white;
+  padding: 20px 15px;
+  border-radius: 25px;
   text-align: center;
-  border: 1px solid #f1f1f1;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f8f8f8;
+}
+.service-card h3 {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #9d80cb;
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(135, 89, 210, 0.1);
-}
-
-.icon-wrapper {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-  display: block;
-}
-
-/* TARIF CARD */
+/* --- TARIFS --- */
 .tarif-card {
-  background: #ffffffa5;
-  padding: 40px;
-  border-radius: 40px;
-  text-align: center;
-  max-width: 400px;
-  margin: 40px auto;
-  box-shadow: 0 20px 50px rgba(135, 89, 210, 0.12);
-  border: 1px solid #f0eaff;
+  max-width: 350px;
+  margin: 30px auto;
 }
-
 .price {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 700;
   color: #9d80cb;
-  letter-spacing: -2px;
 }
-
 .currency {
-  font-size: 2em;
+  font-size: 1.5em;
   vertical-align: super;
   color: #9d80cb;
 }
 
 .button-primary {
   display: block;
-  background: #6e3cb480;
+  background: #9d80cb;
   color: white;
-  padding: 18px;
+  padding: 15px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.external-link {
+  color: inherit; /* Le lien prend la couleur du texte par défaut */
+  text-decoration: none; /* Pas de soulignement */
   transition: all 0.3s ease;
-  margin-top: 25px;
+  display: inline-block;
 }
 
-.button-primary:hover {
-  background: #6e3cb4;
-  box-shadow: 0 10px 20px rgba(110, 60, 180, 0.3);
+.external-link:hover {
+  color: #9d80cb; /* Change vers ton mauve au survol */
+  transform: translateY(-1px); /* Petit saut vers le haut très léger */
+  cursor: pointer;
 }
 
-/* RESPONSIVE */
+/* Optionnel : un petit changement de gras ou d'opacité si tu préfères */
+.external-link:hover strong {
+  color: #a63590;
+}
+
+/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 1.6em;
+  .container {
+    padding: 12px;
   }
-  .price {
-    font-size: 4em;
+
+  /* On réduit uniformément la taille des titres sur mobile */
+  .section-title {
+    font-size: 1.2em !important;
+    margin-bottom: 15px;
+  }
+
+  .typed-container {
+    min-height: 40px !important;
   }
   .typed-heading {
-    font-size: 1.3em;
+    font-size: 0.8em !important;
+  }
+
+  .hero-card {
+    padding: 25px 15px !important;
+  }
+  .hero-description {
+    font-size: 0.7em !important;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .service-card p {
+    font-size: 0.7em !important;
+  }
+
+  .price {
+    font-size: 3.2em !important;
+  }
+  .section-title {
+    font-size: 1.2em;
+  }
+  .info-card p {
+    font-size: 0.7em;
   }
 }
 </style>

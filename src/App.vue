@@ -95,11 +95,13 @@ onMounted(() => {
   min-height: 100vh;
   font-family: "Quicksand", sans-serif;
   color: #333;
-  padding: 20px;
+  /* On enlève le padding ici pour que le menu puisse toucher les bords si besoin */
+  padding: 0;
   position: relative;
+  /* background-color: #fcfafc; Fond léger pour tout le site */
 }
 
-/* Loader Styles - Overlay Fixe */
+/* Loader Styles */
 .loader-overlay {
   position: fixed;
   top: 0;
@@ -131,7 +133,34 @@ onMounted(() => {
   text-transform: uppercase;
 }
 
-/* Animations de transition */
+/* Conteneur de Page - C'est lui qui posait problème */
+.page-content {
+  max-width: 1150px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 15px 35px rgba(155, 107, 195, 0.08);
+  border-radius: 40px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+/* RESPONSIVE : Le secret est ici */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0; /* Pas de marge globale */
+  }
+
+  .page-content {
+    /* Sur mobile, on réduit les marges externes et internes au minimum */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 25px;
+    background: transparent; /* On enlève le fond blanc sur mobile pour plus de légèreté */
+    box-shadow: none; /* On enlève l'ombre qui peut alourdir le rendu */
+  }
+}
+
+/* Animations & SEO Utils */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
@@ -141,25 +170,12 @@ onMounted(() => {
   opacity: 0;
 }
 
-/* Conteneur de Page */
-.page-content {
-  max-width: 1150px;
-  margin: 30px auto;
-  background: #ffffff87;
-  box-shadow: 0 15px 35px rgba(155, 107, 195, 0.08);
-  border-radius: 40px;
-  padding: 40px;
-  transition: all 0.3s ease;
-}
-
-/* Effet de flou pendant le chargement */
 .blur-content {
   filter: blur(5px);
   overflow: hidden;
   height: 100vh;
 }
 
-/* Accessibilité SEO : Cache le texte visuellement */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -180,15 +196,6 @@ onMounted(() => {
   50% {
     transform: scale(1.1);
     opacity: 0.7;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .page-content {
-    margin: 15px;
-    padding: 20px;
-    border-radius: 25px;
   }
 }
 </style>
