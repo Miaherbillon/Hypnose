@@ -10,7 +10,6 @@ import Footer from "./components/Footer.vue";
 import RendezVous from "./components/Rendez-vous.vue";
 import Contactez from "./components/Contactez.vue";
 
-
 const isLoading = ref(true);
 
 onMounted(() => {
@@ -31,7 +30,7 @@ onMounted(() => {
 
     <div class="site-layout" :class="{ 'blur-content': isLoading }">
       <main id="main-content">
-        <Menu />
+        <!-- <Menu /> -->
         <HelloWorld />
 
         <Presentation />
