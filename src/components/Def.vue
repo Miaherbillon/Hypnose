@@ -1,11 +1,13 @@
 <script setup>
-// Pas besoin de ref ici car le texte est statique
+// Texte statique pour l'explication des méthodes
 </script>
 
 <template>
   <section class="definition-container">
     <div class="definition-card">
-      <h2 class="title">Elmanienne ou Ericksonienne : Quelle différence ?</h2>
+      <h2 class="section-title">
+        Elmanienne ou Ericksonienne : Quelle différence ?
+      </h2>
 
       <p>
         L’<strong>hypnose Elmanienne</strong>, développée par Dave Elman, est la
@@ -14,14 +16,6 @@
         état hypnotique profond en quelques minutes grâce à des inductions
         rapides et des <strong>suggestions directes</strong>.
       </p>
-
-      <!-- <div class="highlight-box">
-        <p>
-          Elle est particulièrement adaptée à l'accompagnement thérapeutique
-          concret :
-          <strong>gestion de la douleur, phobies ou sevrage tabagique</strong>.
-        </p>
-      </div> -->
 
       <p class="comparison-text">
         À l'inverse, l’hypnose Ericksonienne repose sur une approche plus
@@ -39,44 +33,40 @@
 </template>
 
 <style scoped>
+/* Conteneur extérieur */
 .definition-container {
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
+  padding: 0;
+  max-width: 1000px;
+  margin: 30px auto;
 }
 
+/* La carte avec l'effet de verre harmonisé */
 .definition-card {
   font-family: "Quicksand", sans-serif;
-  background: #ffffffa5;
-  padding: 40px;
-  border-radius: 30px;
-  box-shadow: 0 15px 35px rgba(155, 107, 195, 0.05);
-  border: 1px solid rgba(155, 107, 195, 0.1);
+  background: #ffffffa5; /* Même transparence que les autres cartes */
+  padding: 35px 25px;
+  border-radius: 40px;
+  box-shadow: 0 15px 35px rgba(135, 89, 210, 0.05);
+  border: 1px solid rgba(135, 89, 210, 0.1);
   color: #6c6767;
   line-height: 1.7;
+  text-align: center; /* Harmonisé avec le reste du site */
 }
 
-.title {
+/* Titre H2 (Identique aux autres sections) */
+.section-title {
   font-family: "Playfair Display", serif;
-  color: #444;
-  text-align: center;
   font-size: 1.8em;
+  color: #444;
   margin-bottom: 25px;
+  line-height: 1.2;
 }
 
-.highlight-box {
-  background-color: #fcfaff;
-  padding: 20px;
-  border-left: 4px solid #9d80cb;
-  margin: 25px 0;
-  border-radius: 0 15px 15px 0;
-  font-style: italic;
-}
-
+/* Texte de comparaison plus discret */
 .comparison-text {
   font-size: 0.95em;
   color: #888;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid rgba(157, 128, 203, 0.1);
   padding-top: 20px;
   margin-top: 20px;
 }
@@ -91,22 +81,22 @@ strong {
   font-weight: 700;
 }
 
-/* RESPONSIVE */
+/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
   .definition-card {
-    font-size: 0.7em;
-    padding: 25px 20px;
-    border-radius: 25px;
-    text-align: left; /* Plus lisible sur petit écran que le 'justify' */
+    padding: 25px 15px;
+    border-radius: 30px;
+    /* On remonte la taille à 0.9em pour la lisibilité mobile */
+    font-size: 0.9em;
   }
 
-  .title {
-    font-size: 1.4em;
-    line-height: 1.3;
+  .section-title {
+    font-size: 1.4em !important;
+    margin-bottom: 15px;
   }
 
   .definition-container {
-    padding: 10px;
+    padding: 0 10px;
   }
 }
 </style>

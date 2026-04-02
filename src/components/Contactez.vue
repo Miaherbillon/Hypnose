@@ -1,63 +1,100 @@
 <script setup>
-import { ref } from "vue";
+// Pas de logique complexe ici, juste un lien mailto
 </script>
 
 <template>
-  <div class="contact-container">
-    <h4 id="contact">Une question ? Besoin d'informations ?</h4>
-    <p>👋 N’hésitez pas à m’écrire, je vous répondrai avec plaisir !</p>
-    <a href="mailto:mhypnose25@gmail.com" class="contact-button">
-      ✉️ Cliquez ici pour m'envoyer un mail
-    </a>
-  </div>
+  <section class="contact-container">
+    <div class="contact-card">
+      <h2 class="section-title">Une question ?</h2>
+      <p class="contact-intro">
+        👋 N’hésitez pas à m’écrire, je vous répondrai avec plaisir !
+      </p>
+
+      <a href="mailto:mhypnose25@gmail.com" class="button-primary">
+        ✉️ Envoyez-moi un mail
+      </a>
+
+      <p class="contact-subtext">mhypnose25@gmail.com</p>
+    </div>
+  </section>
 </template>
 
 <style scoped>
 .contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.contact-card {
+  font-family: "Quicksand", sans-serif;
+  background: #ffffffa5;
+  padding: 40px 25px;
+  border-radius: 40px;
+  box-shadow: 0 15px 35px rgba(135, 89, 210, 0.05);
+  border: 1px solid rgba(135, 89, 210, 0.1);
   text-align: center;
-  margin: 2em;
 }
 
-h4 {
-  /* color: rgb(135, 89, 210); */
-  font-size: 1.3em;
+/* On utilise le même style de titre que les autres sections */
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8em;
+  color: #444;
+  margin-bottom: 15px;
 }
 
-p {
+.contact-intro {
   font-size: 1.1em;
-  margin-bottom: 1.2em;
+  color: #666;
+  margin-bottom: 25px;
 }
 
-.contact-button {
+.contact-subtext {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #9d80cb;
+  font-weight: 500;
+}
+
+/* Bouton harmonisé avec ton CTA de réservation */
+.button-primary {
   display: inline-block;
-  background-color: rgba(135, 89, 210, 0.623);
+  background: linear-gradient(135deg, #9d80cb, #8265b5);
   color: white;
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 0.8em 1.2em;
-  border-radius: 30px;
+  padding: 15px 35px;
+  border-radius: 50px;
   text-decoration: none;
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(157, 128, 203, 0.2);
 }
 
-.contact-button:hover {
-  color: rgb(255, 255, 255);
-  transform: scale(1.05);
+.button-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(157, 128, 203, 0.3);
+  filter: brightness(1.1);
 }
+
+/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
-  h4 {
-    font-size: 1em;
+  .contact-card {
+    padding: 30px 15px;
+    border-radius: 30px;
+    margin: 0 10px;
   }
-  p {
-    font-size: 0.8em;
+
+  .section-title {
+    font-size: 1.4em !important;
   }
-  .contact-button {
-    font-size: 0.8em;
-    font-weight: bold;
-    padding: 0.5em 1em;
+
+  .contact-intro {
+    font-size: 0.95em;
+  }
+
+  .button-primary {
+    font-size: 0.9em;
+    padding: 12px 25px;
   }
 }
 </style>
