@@ -65,8 +65,8 @@
 
   /* 2. On réduit la bulle blanche elle-même */
   .title-wrapper h1 {
-    font-size: 1.5em !important;
-    padding: 0.3em 1.2em; /* Réduction drastique du vide interne */
+    font-size: 2em !important;
+    padding: 0.4em 20%; /* Réduction drastique du vide interne */
     margin: 0 !important; /* On annule les marges autour du titre */
     border-radius: 25px; /* Arrondi plus adapté à la petite taille */
   }
