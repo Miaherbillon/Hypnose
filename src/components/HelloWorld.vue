@@ -2,7 +2,8 @@
 
 <template>
   <div class="title-wrapper">
-    <h1 class="main-title">M'Hypnose</h1>
+    <img src="/logo2.png" alt="Logo" class="Logo" />
+    <h2 class="main-title">Séances d'hypnose OMNI & Elmanienne en visio</h2>
     <div class="icon-container">
       <FontAwesomeIcon
         icon="fa-solid fa-arrow-down-long"
@@ -17,16 +18,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1em auto 2em auto;
+  margin: 1em auto 1em auto;
   width: 100%;
 }
 
 .main-title {
   font-family: "Playfair Display", serif;
-  font-size: 3.5em;
-  color: #444;
+  font-size: 2em;
+  color: #000000;
   background-color: white;
-  padding: 0.2em 1.5em;
+  padding: 0.2em 1.2em;
   border-radius: 100px;
   box-shadow: 0 10px 30px rgba(157, 128, 203, 0.15);
   border: 4px solid white;
@@ -42,10 +43,12 @@
   color: #9d80cb;
   font-size: 1.5em;
 }
-
+.Logo {
+  width: 30em;
+}
 @media (max-width: 768px) {
   .main-title {
-    font-size: 2em;
+    font-size: 1em;
     padding: 0.3em 1.2em;
     border-radius: 40px;
     border-width: 2px;

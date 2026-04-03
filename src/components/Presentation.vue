@@ -29,23 +29,23 @@ onUnmounted(() => {
     </div>
 
     <div class="hero-card">
-      <h2 class="section-title">Votre praticienne <strong>OMNI</strong></h2>
+      <div class="card">
+        <div>
+          <h2 class="section-title">Votre praticienne <strong>OMNI</strong></h2>
+          <h2>Herbillon Mia</h2>
+        </div>
+        <img src="/mia1.png" alt="Photo de Mia" class="Mia" />
+      </div>
+
       <p class="hero-description">
-        Je suis <strong>Mia</strong>, aide-soignante de métier et praticienne
-        certifiée
-        <a
-          href="https://www.mhp-hypnose.com/lhistoire-de-omni"
-          target="_blank"
-          class="external-link"
-          ><strong>OMNI Hypnosis</strong></a
-        >. J'allie mon expertise du soin à la seule méthode d'hypnose certifiée
-        <a
-          href="https://www.mhp-hypnose.com/reconnaissances"
-          target="_blank"
-          class="external-link"
-          ><strong>ISO 9001</strong></a
-        >. Une approche <strong>orientée résultat</strong> pour transformer vos
-        blocages en ressources.
+        Forte de mon expérience d'<strong>aide-soignante</strong>, le soin et
+        l'écoute sont au cœur de mon accompagnement. Formée au sein du cursus
+        <strong>MHP Hypnose</strong>, j'utilise la méthode
+        <strong>OMNI</strong>, une approche
+        <strong>Elmanienne moderne</strong> qui va droit au but. <br /><br />
+        Mon objectif : atteindre rapidement un état hypnotique profond pour
+        transformer vos blocages en ressources, avec une approche
+        <strong>pragmatique et bienveillante</strong>.
       </p>
     </div>
 
@@ -75,11 +75,38 @@ onUnmounted(() => {
 
     <div class="info-card">
       <h2 class="section-title">La Méthode OMNI</h2>
-      <p>
-        Basée sur les travaux de <strong>Dave Elman</strong>, elle permet
-        d'atteindre un état hypnotique profond en quelques minutes pour agir
-        directement sur la cause.
-      </p>
+
+      <div class="method-intro">
+        <p>
+          J'utilise la <strong>méthode OMNI</strong>, une approche
+          <strong>Elmanienne</strong> moderne.
+        </p>
+        <p>
+          Là où l'hypnose classique cherche à "masser" le problème par des
+          métaphores, la méthode Elmanienne va droit au but : elle utilise une
+          induction rapide pour atteindre un état de relaxation profonde (le
+          <strong>somnambulisme hypnotique</strong>) en quelques minutes
+          seulement.
+        </p>
+      </div>
+
+      <div class="method-highlights">
+        <div class="highlight-item">
+          <span class="highlight-icon">🎯</span>
+          <p>
+            <strong>Direct :</strong> On agit sur la cause racine, pas juste le
+            symptôme.
+          </p>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-icon">⚡</span>
+          <p>
+            <strong>Rapide :</strong> Plus de temps pour le travail
+            thérapeutique réel.
+          </p>
+        </div>
+        <div class="highlight-item"></div>
+      </div>
     </div>
 
     <div class="tarif-card">
@@ -88,7 +115,9 @@ onUnmounted(() => {
       </div>
       <p><strong>Séance d'environ 1h</strong></p>
       <p>Visio ou domicile (Besançon).</p>
-      <a href="#votre-lien-de-rdv" class="button-primary">Réserve ta séance</a>
+      <a href="#votre-lien-de-rdv" class="button-primary"
+        >Réserver une séance</a
+      >
     </div>
   </div>
 </template>
@@ -119,7 +148,7 @@ strong {
 .section-title {
   font-family: "Playfair Display", serif;
   font-size: 1.8em;
-  color: #444;
+  color: #000000;
   text-align: center;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -225,10 +254,28 @@ strong {
   transform: scale(1.02);
 }
 
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: right;
+  font-size: 1.2em;
+}
+.Mia {
+  width: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 1.4em;
+    font-size: 1em;
   }
   .typed-heading {
     font-size: 0.95em;
@@ -258,6 +305,22 @@ strong {
   }
   .price {
     font-size: 3.2em;
+  }
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    text-align: right;
+    font-size: 0.7em;
+  }
+  .Mia {
+    width: 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

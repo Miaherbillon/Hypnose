@@ -42,7 +42,7 @@
 .section-title {
   font-family: "Playfair Display", serif;
   font-size: 1.8em;
-  color: #444;
+  color: #000000;
   margin-bottom: 10px;
 }
 

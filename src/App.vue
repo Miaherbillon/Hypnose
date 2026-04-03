@@ -30,7 +30,7 @@ onMounted(() => {
 
     <div class="site-layout" :class="{ 'blur-content': isLoading }">
       <main id="main-content">
-        <!-- <Menu /> -->
+        <Menu />
         <HelloWorld />
 
         <Presentation />
@@ -53,6 +53,7 @@ onMounted(() => {
 body {
   margin: 0;
   padding: 0;
+  /* width: 90%; */
   /* L'image de fond */
   background:
     linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
